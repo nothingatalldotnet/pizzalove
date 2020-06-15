@@ -1,0 +1,7 @@
+info.txt
+*.log
+*.sql
+*.sqlite
+wp-content/themes/twenty*/
+wp-content/plugins/hello.php
+wp-config.php
