@@ -3,7 +3,7 @@
 }
 
 html { 
-	background: url('assets/images/background.svg') no-repeat center center fixed; 
+	background: url('/assets/images/background.svg') no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -13,13 +13,13 @@ html {
 
 .notice {
 	width: 50%;
-	margin: 40px auto;
-	padding: 20px;
+	margin: 20px auto;
+	padding: 10px;
 	background: rgba(255,255,255,1);
 	color: #000;
-	border-radius: 11px 11px 11px 11px;
-	-moz-border-radius: 11px 11px 11px 11px;
-	-webkit-border-radius: 11px 11px 11px 11px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
 	text-align: center;
 }
 
@@ -34,6 +34,41 @@ h1 {
 }
 
 .red {
+	color: rgb(237,28,36);
+}
+
+#mc_embed_signup {
+	background:#fff;
+	clear:left;
+}
+
+#mc_embed_signup_scroll {
+	padding: 10px 10%;	
+}
+
+#mce-EMAIL {
+	width: 100% !important;
+	border: 1px solid !important;
+	border-radius: 5px 5px 5px 5px !important;
+	-moz-border-radius: 5px 5px 5px 5px !important;
+	-webkit-border-radius: 5px 5px 5px 5px !important;
+}
+
+#mc-embedded-subscribe {
+	margin: auto !important;
+	background: 
+}
+
+a {
+	color: #000;
+	font-size: 24px;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+}
+
+a:hover {
 	color: rgb(237,28,36);
 }
 
