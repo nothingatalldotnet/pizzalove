@@ -14,8 +14,6 @@
     }
     add_action('wp_dashboard_setup', 'remove_draft_widget', 999);
 
-
-    // post types
     function create_post_type() {
         register_post_type('news',
             array(
