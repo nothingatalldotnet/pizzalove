@@ -13,6 +13,8 @@
   	remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 	remove_action('template_redirect', 'rest_output_link_header', 11, 0);
 
+	remove_action('admin_color_scheme_picker', 'admin_color_scheme_picker');
+
 	/**
 	 * Remove jQuery
 	 */
