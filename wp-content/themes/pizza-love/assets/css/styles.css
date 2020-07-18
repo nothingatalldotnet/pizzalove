@@ -149,7 +149,7 @@ header .menu-items a {
 }
 
 
-@media (max-width: 880px) {
+@media (max-width: 970px) {
 
 	.fixed-nav-bar {
 		display: none;
@@ -276,6 +276,12 @@ header .menu-items a {
     padding-top: 150px;
 }
 
+@media (max-width: 970px) {
+	.content {
+    	padding-top: 0;
+    }
+}
+
 .padded {
     margin: 0 auto;
     width: 80%;
@@ -298,6 +304,12 @@ header .menu-items a {
 
 .block-cta img {
 	flex: 33%;
+}
+
+@media (max-width: 690px) {
+	.block-cta img {
+		display: none;
+	}
 }
 
 .block-cta div {
@@ -348,6 +360,20 @@ header .menu-items a {
 	font-size: 20px
 }
 
+.block-popular article img {
+	width: 100%;
+}
+
+@media (max-width: 690px) {
+	.block-popular article:last-child {
+		display:none;
+	}
+}
+
+.block-latest-news article {
+	width: 100%;
+}
+
 .block-latest-news article:first-child {
 	padding-right: 30px;
 }
@@ -355,6 +381,13 @@ header .menu-items a {
 .block-latest-news article:last-child {
 	padding-left: 30px;
 }
+
+@media (max-width: 690px) {
+	.block-latest-news article:last-child {
+		display:none;
+	}
+}
+
 
 .block-latest-news article img {
 	width: 100%;
@@ -366,6 +399,8 @@ header .menu-items a {
 	border: solid 1px #ED1C24;
 	border-top: 0;
 	display: inline-block;
+	width:100%;
+	min-height: 190px;
 }
 
 .block-signup {
@@ -407,6 +442,12 @@ header .menu-items a {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	position: relative;
+}
+
+@media (max-width: 690px) {
+	.image-stack {
+		display: none;
+	}
 }
 
 .image-stack .top {

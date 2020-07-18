@@ -24,6 +24,10 @@ if(have_posts()) {
 		$about_cta_text = get_field('about_cta_button_text');
 		$about_image_1 = get_field('about_image_1');
 		$about_image_2 = get_field('about_image_2');
+
+		$contact_title_black = get_field('contact_title_black');
+		$contact_title_red = get_field('contact_title_red');
+		$contact_text = get_field('contact_text'); 
 	}
 }
 ?>
@@ -34,25 +38,6 @@ if(have_posts()) {
 				<a href="<?php echo $banner_cta_link; ?>" class="red-button"><?php echo $banner_cta_text; ?></a>
 			</div>
 		</div>
-
-		<div class="block-about padded">
-			<h2><?php echo $about_title_black; ?>  <span class="red"><?php echo $about_title_red; ?></span></h2>
-			<div class="flex">
-				<div class="left">
-					<?php echo $about_text; ?>
-					<a href="<?php echo $about_cta_link; ?>" class="red-button"><?php echo $about_cta_text; ?></a></p>
-				</div>
-				<div class="image-stack">
-					<div class="top">
-						<img src="/wp-content/themes/pizza-love/assets/images/fancy.png">
-					</div>
-					<div class="bottom">
-						<img src="/wp-content/themes/pizza-love/assets/images/fancy.png">
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 <?php
 	if(have_rows('featured_repeater')) {
@@ -82,13 +67,32 @@ if(have_posts()) {
 ?>
 			</div>
 		</div>
+
+		<div class="block-about padded">
+			<h2><?php echo $about_title_black; ?>  <span class="red"><?php echo $about_title_red; ?></span></h2>
+			<div class="flex">
+				<div class="left">
+					<?php echo $about_text; ?>
+					<a href="<?php echo $about_cta_link; ?>" class="red-button"><?php echo $about_cta_text; ?></a></p>
+				</div>
+				<div class="image-stack">
+					<div class="top">
+						<img src="/wp-content/themes/pizza-love/assets/images/fancy.png">
+					</div>
+					<div class="bottom">
+						<img src="/wp-content/themes/pizza-love/assets/images/fancy.png">
+					</div>
+				</div>
+			</div>
+		</div>
+
 <?php
 	}
 
     $latest_news_args = array(  
         'post_type' => 'news',
         'post_status' => 'publish',
-        'posts_per_page' => 3, 
+        'posts_per_page' => 2, 
         'orderby' => 'date', 
         'order' => 'DESC'
     );
@@ -139,11 +143,6 @@ if(have_posts()) {
 			</div>
 		</div>
 
-<?php
-		$contact_title_black = get_field('contact_title_black');
-		$contact_title_red = get_field('contact_title_red');
-		$contact_text = get_field('contact_text');
-?>
 		<div class="block-map padded">
 			<h2><?php echo $contact_title_black; ?> <span class="red"><?php echo $contact_title_red; ?></span></h2>
 			<div class="flex">
