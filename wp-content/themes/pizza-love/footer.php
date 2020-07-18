@@ -1,11 +1,9 @@
 
-			<footer>
-<?php
-	wp_nav_menu(array('theme_location' => 'footer-menu', 'menu_id' => '', 'menu_class' => 'footer-items', 'container_class' => 'foot'));
-	wp_nav_menu(array('theme_location' => 'footer-tiny-menu', 'menu_id' => '', 'menu_class' => 'footer-tiny-items', 'container_class' => 'tiny'));
-?>
-			</footer>
-		</div>
+		<footer>
+			<a class="logo" href="#">
+				<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.svg'; ?>" class="site-logo" alt="PizzaLove Logo">
+			</a>
+		</footer>
 	</body>
 <?php
 	wp_footer(); 
