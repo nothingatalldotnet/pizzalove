@@ -4,7 +4,7 @@ Tags: credit card, square, woocommerce, inventory sync
 Requires at least: 4.6
 Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 2.1.5
+Stable tag: 2.1.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -71,6 +71,20 @@ If you get stuck, you can ask for help in the [Plugin Forum](https://wordpress.o
 2. The payment gateway settings.
 
 == Changelog ==
+
+= 2.1.6 - 2020.07.15 =
+* Fix - Make the "Sync Now" button disabled when no business location is set in Square settings.
+* Fix - Enable checking/unchecking the Manage Stock setting for all variations.
+* Fix - Refunding an order paid with another payment gateway will no longer sync inventory with Square when "Do not sync product data" is selected.
+* Fix - Imported variation products that are out-of-stock will no longer show on the shop page when "Hide out of stock items from the catalog" is selected.
+* Fix - Product images will now sync when Square is in Sandbox mode.
+* Fix - Damaged stock adjustments will now sync properly to WooCommerce when multiple stock adjustments are made.
+* Fix - Improve performance when manually syncing large amount of stock adjustments from Square (some inventory updates were missing).
+* Fix - Quick editing products no longer sets incorrect stock quantities or disables syncing.
+* Fix - Existing customer that have been removed from the connected Square account, or can't be found will now be able to save a new card on the checkout.
+* Fix - When the System of Record is set to WooCommerce, product images will now properly sync to Square.
+* Tweak - Use CSC consistently in all error messages when referring to the Card Security Code.
+* Tweak - Change to using WordPress core methods to import/sync images from Square.
 
 = 2.1.5 - 2020.05.15 =
 * Fix - Fatal errors caused by incorrectly fetching locations before plugin init.

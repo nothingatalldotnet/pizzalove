@@ -168,7 +168,7 @@ header .menu-items a {
 	#menu-toggle {
 		display: block;
 		position: relative;
-		top: 36px;
+		top: 50px;
 		z-index: 1;
 		-webkit-user-select: none;
 		user-select: none;
@@ -194,7 +194,7 @@ header .menu-items a {
 		right: -88%;
 		margin-bottom: 5px;
 		position: relative;
-		background: #94000F;
+		background: #ed1c23;
 		border-radius: 3px;
 		z-index: 1;
 		transform-origin: 4px 0px;
@@ -214,7 +214,7 @@ header .menu-items a {
 	#menu-toggle input:checked ~ span {
 		opacity: 1;
 		transform: rotate(45deg) translate(-2px, -1px);
-		background: #232323;
+		background: #ed1c23;
 	}
 
 	#menu-toggle input:checked ~ span:nth-last-child(3) {
@@ -245,7 +245,11 @@ header .menu-items a {
 	}
 
 	#mobile-nav a:hover {
-		color: #94000F;
+		color: #ed1c23;
+	}
+
+	#mobile-nav a:active {
+		color: #ed1c23;
 	}
 
 	#mobile-nav li {
@@ -383,6 +387,10 @@ header .menu-items a {
 }
 
 @media (max-width: 690px) {
+	.block-latest-news article:first-child {
+		padding: 0;
+	}
+
 	.block-latest-news article:last-child {
 		display:none;
 	}

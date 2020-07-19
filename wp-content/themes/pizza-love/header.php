@@ -58,7 +58,7 @@
 				    <span></span>
 				    <span></span>
 				    <span></span>
-				    <?php //wp_nav_menu(array('theme_location' => 'main-menu-mobile', 'menu_id' => 'mobile-nav', 'menu_class' => 'menu-items', 'container' => '')); ?>
+					<?php wp_nav_menu(array('theme_location' => 'main-menu', 'menu_id' => 'mobile-nav', 'menu_class' => 'menu-items', 'container' => '')); ?>
 				</div>
 			</nav>
 			<div id="mobile-logo">

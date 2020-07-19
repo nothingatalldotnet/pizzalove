@@ -502,6 +502,12 @@ jQuery( document ).ready ( $ ) ->
 
 			if errors
 
+				field_order = [ "cardNumber", "expirationDate", "cvv", "postalCode" ]
+
+				# sort based on the field order
+				# without the brackets around a.field and b.field the precedence is different and gives different results
+				errors.sort (a,b) -> field_order.indexOf(a.field) - field_order.indexOf(b.field)
+
 				console.error errors
 
 				$( errors ).each ( index, error ) =>
@@ -509,7 +515,8 @@ jQuery( document ).ready ( $ ) ->
 					# only display the errors that can be helped by the customer
 					if error.type in [ 'UNSUPPORTED_CARD_BRAND', 'VALIDATION_ERROR' ]
 
-						messages.push( error.message )
+						# To avoid confusion between CSC used in the frontend and CVV that is used in the error message
+						messages.push( error.message.replace /CVV/, 'CSC' )
 
 					# otherwise, log more serious errors to the debug log
 					else

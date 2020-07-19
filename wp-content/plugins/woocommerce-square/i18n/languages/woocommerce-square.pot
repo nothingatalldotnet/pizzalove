@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Square 2.1.5\n"
+"Project-Id-Version: WooCommerce Square 2.1.6\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/woocommerce/woocommerce-square/issues\n"
-"POT-Creation-Date: 2020-05-15 06:52:57+00:00\n"
+"POT-Creation-Date: 2020-07-15 06:10:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,54 +14,58 @@ msgstr ""
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: includes/AJAX.php:109
+#: includes/AJAX.php:112
 msgid "Please mark product as un-synced and save, then synced again."
 msgstr ""
 
-#: includes/AJAX.php:122
+#: includes/AJAX.php:125
 #. translators: Placeholders: %1$s = error message, %2$s = help text
 msgid "Unable to fetch inventory: %1$s. %2$s"
 msgstr ""
 
-#: includes/AJAX.php:127
+#: includes/AJAX.php:130
 #. translators: Placeholders: %s = help text
 msgid "Error finding item in Square. %s"
 msgstr ""
 
-#: includes/AJAX.php:145
+#: includes/AJAX.php:148
 msgid "Could not start import. Please try again."
 msgstr ""
 
-#: includes/AJAX.php:148
+#: includes/AJAX.php:151
 msgid ""
 "Your products are being imported in the background! This may take some time "
 "to complete."
 msgstr ""
 
-#: includes/AJAX.php:194
+#: includes/AJAX.php:197
 msgid "Could not delete records."
 msgstr ""
 
-#: includes/AJAX.php:203
+#: includes/AJAX.php:206
 msgid "Could not delete record."
 msgstr ""
 
-#: includes/AJAX.php:214
+#: includes/AJAX.php:217
 msgid "Could not resolve record."
 msgstr ""
 
-#: includes/AJAX.php:227
+#: includes/AJAX.php:230
 msgid "Could not unsync product."
 msgstr ""
 
-#: includes/AJAX.php:239
+#: includes/AJAX.php:242
 #. translators: Placeholder: %s - error message
 msgid "An error occurred. %s"
 msgstr ""
 
-#: includes/AJAX.php:284
+#: includes/AJAX.php:287
 #. translators: Placeholder: %s - sync job ID
 msgid "No sync job in progress found %s"
+msgstr ""
+
+#: includes/AJAX.php:324
+msgid "Stock must be fetched from Square before editing stock quantity"
 msgstr ""
 
 #: includes/Admin/Privacy.php:46 includes/Admin/Settings_Page.php:55
@@ -97,7 +101,7 @@ msgstr ""
 msgid "Import Products From Square"
 msgstr ""
 
-#: includes/Admin/Settings_Page.php:175 includes/Admin/Sync_Page.php:334
+#: includes/Admin/Settings_Page.php:175 includes/Admin/Sync_Page.php:336
 msgid "Close modal window"
 msgstr ""
 
@@ -110,7 +114,7 @@ msgid ""
 "the import. %1$sOnly use this action to perform a one-time import!%2$s"
 msgstr ""
 
-#: includes/Admin/Settings_Page.php:184 includes/Admin/Sync_Page.php:366
+#: includes/Admin/Settings_Page.php:184 includes/Admin/Sync_Page.php:368
 #: vendor/prospress/action-scheduler/classes/ActionScheduler_ListTable.php:133
 #: vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/admin/views/html-order-partial-capture.php:66
 #: vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/class-sv-wc-payment-gateway-my-payment-methods.php:227
@@ -164,37 +168,41 @@ msgid "Please connect to Square to enable product sync."
 msgstr ""
 
 #: includes/Admin/Sync_Page.php:147
-msgid "There are currently no products marked to be synced with Square."
+msgid "Please set the business location to enable product sync."
 msgstr ""
 
 #: includes/Admin/Sync_Page.php:149
+msgid "There are currently no products marked to be synced with Square."
+msgstr ""
+
+#: includes/Admin/Sync_Page.php:151
 msgid "A sync is currently in progress. Please try again later."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:154
+#: includes/Admin/Sync_Page.php:156
 #. translators: Placeholder: %s - reason text
 msgid "Product sync between WooCommerce and Square is currently unavailable. %s"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:161
+#: includes/Admin/Sync_Page.php:163
 msgid "Synced products"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:162
+#: includes/Admin/Sync_Page.php:164
 msgid "Latest sync"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:163
+#: includes/Admin/Sync_Page.php:165
 msgid "Next sync"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:164 includes/Admin/Sync_Page.php:270
-#: includes/Admin/Sync_Page.php:311
+#: includes/Admin/Sync_Page.php:166 includes/Admin/Sync_Page.php:272
+#: includes/Admin/Sync_Page.php:313
 #: vendor/skyverge/wc-plugin-framework/woocommerce/payment-gateway/class-sv-wc-payment-gateway-my-payment-methods.php:426
 msgid "Actions"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:173 includes/Emails/Sync_Completed.php:204
+#: includes/Admin/Sync_Page.php:175 includes/Emails/Sync_Completed.php:204
 #. translators: Placeholder: %d number of products synced with Square
 #. translators: Placeholder: %d products count
 msgid "%d product"
@@ -202,66 +210,66 @@ msgid_plural "%d products"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Admin/Sync_Page.php:190
+#: includes/Admin/Sync_Page.php:192
 msgid "Importing now&hellip;"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:192
+#: includes/Admin/Sync_Page.php:194
 msgid "Syncing now&hellip;"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:207
+#: includes/Admin/Sync_Page.php:209
 msgid "Not synced yet."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:239
+#: includes/Admin/Sync_Page.php:241
 msgid "Sync now"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:268 includes/Admin/Sync_Page.php:309
+#: includes/Admin/Sync_Page.php:270 includes/Admin/Sync_Page.php:311
 #: vendor/prospress/action-scheduler/classes/ActionScheduler_ListTable.php:97
 msgid "Status"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:269 includes/Admin/Sync_Page.php:310
+#: includes/Admin/Sync_Page.php:271 includes/Admin/Sync_Page.php:312
 msgid "Message"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:300
+#: includes/Admin/Sync_Page.php:302
 msgid "No records found."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:332
+#: includes/Admin/Sync_Page.php:334
 msgid "Sync products with Square"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:342
+#: includes/Admin/Sync_Page.php:344
 msgid ""
 "If a match is found in Square, product data in WooCommerce will be "
 "overwritten with Square data."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:344
+#: includes/Admin/Sync_Page.php:346
 msgid ""
 "If a match is found in WooCommerce, product data in Square will be "
 "overwritten with WooCommerce data."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:348
+#: includes/Admin/Sync_Page.php:350
 msgid ""
 "If a match is not found in Square, the product will be hidden from the "
 "catalog in WooCommerce."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:350
+#: includes/Admin/Sync_Page.php:352
 msgid "If a match is not found in Square, the product will be skipped in the sync."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:353
+#: includes/Admin/Sync_Page.php:355
 msgid "If a match is not found, a new product will be created in Square."
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:359
+#: includes/Admin/Sync_Page.php:361
 #. translators: Placeholders: %1$s - the system of record name (e.g. Square or
 #. WooCommerce), %3%s - unordered HTML list of additional information item(s)
 msgid ""
@@ -269,51 +277,51 @@ msgid ""
 "For all products synced with Square: %2$s"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:367
+#: includes/Admin/Sync_Page.php:369
 msgid "Start sync"
 msgstr ""
 
-#: includes/Admin.php:116 includes/Handlers/Products.php:176
+#: includes/Admin.php:115 includes/Handlers/Products.php:176
 msgid "Synced with Square"
 msgstr ""
 
-#: includes/Admin.php:117
+#: includes/Admin.php:116
 msgid "Managed by Square"
 msgstr ""
 
-#: includes/Admin.php:118
+#: includes/Admin.php:117
 msgid "Fetch stock from Square"
 msgstr ""
 
-#: includes/Admin.php:150 includes/Sync/Records/Record.php:206
+#: includes/Admin.php:149 includes/Sync/Records/Record.php:206
 msgid "Resolved"
 msgstr ""
 
-#: includes/Admin.php:151
+#: includes/Admin.php:150
 msgid "No records found"
 msgstr ""
 
-#: includes/Admin.php:152
+#: includes/Admin.php:151
 msgid "Skipped"
 msgstr ""
 
-#: includes/Admin.php:153
+#: includes/Admin.php:152
 msgid "Imported"
 msgstr ""
 
-#: includes/Admin.php:155
+#: includes/Admin.php:154
 msgid "Enable to fetch inventory changes from Square"
 msgstr ""
 
-#: includes/Admin.php:156
+#: includes/Admin.php:155
 msgid "Enable to push inventory changes to Square"
 msgstr ""
 
-#: includes/Admin.php:159 includes/Settings.php:200
+#: includes/Admin.php:158 includes/Settings.php:200
 msgid "Inventory is fetched from Square periodically and updated in WooCommerce"
 msgstr ""
 
-#: includes/Admin.php:162
+#: includes/Admin.php:161
 #. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
 msgid ""
 "Inventory is %1$salways fetched from Square%2$s periodically to account for "
@@ -488,7 +496,7 @@ msgid ""
 "Import Products from Square settings."
 msgstr ""
 
-#: includes/Handlers/Product.php:351
+#: includes/Handlers/Product.php:294
 msgid "Product not synced with Square"
 msgstr ""
 
@@ -820,7 +828,7 @@ msgid_plural "Updated data for %d categories."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Sync/Manual_Synchronization.php:1086
+#: includes/Sync/Manual_Synchronization.php:1099
 #. translators: Placeholder: %s - product ID
 msgid "Product %s could not be updated in Square."
 msgstr ""
@@ -3029,12 +3037,12 @@ msgstr ""
 msgid "https://www.woocommerce.com/"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:262
+#: includes/Admin/Sync_Page.php:264
 msgctxt "Delete all records"
 msgid "Clear history"
 msgstr ""
 
-#: includes/Admin/Sync_Page.php:267 includes/Admin/Sync_Page.php:308
+#: includes/Admin/Sync_Page.php:269 includes/Admin/Sync_Page.php:310
 msgctxt "Date - Time"
 msgid "Time"
 msgstr ""
