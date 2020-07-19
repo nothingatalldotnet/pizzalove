@@ -277,7 +277,10 @@ header .menu-items a {
 ***************************/
 .content {
 	flex: 1 0 auto;
-    padding-top: 150px;
+}
+
+.content.home {
+	padding-top: 150px;	
 }
 
 @media (max-width: 970px) {
@@ -471,7 +474,41 @@ header .menu-items a {
 }
 
 
+.flex.menu-page .menu-content {
+	flex: 75%;
+	display: flex;
+    flex-wrap:wrap;
+}
 
+.flex.menu-page .menu-filters {
+	flex: 25%;
+}
+
+.menu-content .product {
+	flex-basis:40%;
+	width: 100%;
+	display: flex;
+	border: solid 1px #ED1C24;
+	margin: 10px;
+    padding: 10px;
+}
+
+.menu-content .product .tags span {
+	background-color:#000;
+	display: inline-block;
+	cursor: pointer;
+	color: #fff;
+	font-size: 8px;
+	font-weight: bold;
+	padding: 4px 4px;
+	text-decoration: none;
+}
+
+@media (max-width: 690px) {
+	.menu-content .product {
+		flex-basis:100%;
+	}
+}
 
 
 
@@ -508,6 +545,7 @@ footer {
 	flex-shrink: 0;
     background: #000;
     padding: 24px 18px;
+    border-top: 1px solid #000;
 }
 
 	footer .logo {

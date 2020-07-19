@@ -4,7 +4,7 @@
 	*/
 	get_header();
 ?>
-	<div class="content">
+	<div class="content home">
 		<div class="block-cta">
 <?php
 if(have_posts()) {
