@@ -293,6 +293,13 @@ header .menu-items a {
     margin: 0 auto;
     width: 80%;
     padding: 24px 0
+    margin-top: 125px;
+}
+
+@media (max-width: 970px) {
+	.padded {
+		margin-top: 0;
+	}
 }
 
 
