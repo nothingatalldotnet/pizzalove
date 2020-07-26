@@ -49,20 +49,23 @@
 			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms(get_the_ID(), 'product_tag');
 
-			echo '<div class="product">';
+			$prod_tag_display = "";
+			$prod_tag_class = "";
+
+			if($prod_tags && !is_wp_error($prod_tags)) {
+				foreach($prod_tags as $prod_tag) {
+					$prod_tag_class .= " ".$prod_tag->slug;
+					$prod_tag_display .= '<span>'.$prod_tag->name.'</span> ';
+				}
+			}
+
+			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
 			echo '	<img src="'.$prod_image.'">';
 			echo '	<div>';
 			echo '		<h3>'.$prod_name.'</h3>';
 			echo '		<p>'.$prod_excerpt.'</p>';
 			echo '		<a href="'.$prod_url.'" class="red-button">Buy</a>';
-			echo '		<div class="tags">';
-
-			if($prod_tags && !is_wp_error($prod_tags)) {
-				foreach($prod_tags as $prod_tag) {
-					echo '<span>'.$prod_tag->name.'</span> ';
-				}
-			}
-			echo '		</div>';
+			echo '		<div class="tags">'.$prod_tag_display."</div>";
 			echo '	</div>';
 			echo '</div>';
 
@@ -75,9 +78,10 @@
 			<div id="" class="menu-filters">
 				<h3>Categories</h3>
 				<ul>
+					<li><label>All <input type='radio' name='category' value='' checked><span class='radiomark'></span></label></li>
 <?php
 	for($i=0; $i < count($category_array); $i++) {
-		echo "<li>".$category_array[$i]['name']."</li>";
+		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
 	}
 ?>
 				</ul>
@@ -85,7 +89,7 @@
 				<ul>
 <?php
 	for($i=0; $i < count($tag_array); $i++) {
-		echo "<li>".$tag_array[$i]['name']."</li>";
+		echo "<li><label>".$tag_array[$i]['name']."<input type='checkbox' name='tag' value='".$tag_array[$i]['slug']."'><span class='checkmark'></span></label></li>";
 	}
 ?>
 				</ul>
