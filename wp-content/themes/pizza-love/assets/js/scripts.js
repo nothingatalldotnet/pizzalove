@@ -5,6 +5,7 @@ var General = {
 
 	init: function() {
 		General.initIsotope();
+		General.initSlick();
 		General.bindEvents();
 	},
 
@@ -14,6 +15,33 @@ var General = {
             itemSelector: '.product',
             percentPosition: true
         });
+	},
+
+	initSlick: function() {
+		jQuery('.block-popular .carousel').slick({
+			autoplay: true,
+			dots: true,
+			infinite: false,
+			speed: 300,
+			arrows: false,
+			slidesToShow: 3,
+			responsive: [{
+				breakpoint: 900,
+				settings: {
+        			slidesToShow: 2,
+			        infinite: true,
+			        dots: true
+        		}
+			},{
+				breakpoint: 700,
+				settings: {
+        			slidesToShow: 1,
+			        infinite: true,
+			        dots: true,
+			        draggable: true
+        		}
+			}]
+		});
 	},
 
 	bindEvents: function() {
