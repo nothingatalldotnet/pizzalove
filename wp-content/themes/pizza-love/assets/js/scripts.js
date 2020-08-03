@@ -52,6 +52,7 @@ var General = {
 
 	toggleFilterDropdown: function(e) {
 		jQuery('.indicator').toggleClass('glyphicon-chevron-down-custom glyphicon-chevron-up-custom');
+		jQuery('#drop-filters .filter-list').slideToggle();
 	},
 
 	filterItems: function() {

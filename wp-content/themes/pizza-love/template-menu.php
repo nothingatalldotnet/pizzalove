@@ -16,7 +16,26 @@
 ?>
 	<div class="content">
 		<div id="drop-filters">
-        	<h4 class="filter-title"> <a data-toggle="collapse"> Categories <i class="indicator glyphicon glyphicon-chevron-down-custom  pull-right"><span class="sp-1"></span><span class="sp-2"></span></i> </a> </h4>
+        	<h4 class="filter-title"> <a data-toggle="collapse"> Filters <i class="indicator glyphicon glyphicon-chevron-down-custom pull-right"><span class="sp-1"></span><span class="sp-2"></span></i> </a> </h4>
+        	<div class="filter-list">
+				<h3>Categories</h3>
+				<ul>
+					<li><label>All <input type='radio' name='category' value='' checked><span class='radiomark'></span></label></li>
+<?php
+	for($i=0; $i < count($category_array); $i++) {
+		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
+	}
+?>
+				</ul>
+				<h3>Tags</h3>
+				<ul>
+<?php
+for($i=0; $i < count($tag_array); $i++) {
+	echo "<li><label>".$tag_array[$i]['name']."<input type='checkbox' name='tag' value='".$tag_array[$i]['slug']."'><span class='checkmark'></span></label></li>";
+}
+?>
+				</ul>
+			</div>
 		</div>
 		<div class="menu-page padded">
 			<div class="menu-content">

@@ -446,6 +446,101 @@ header .menu-items a {
 		display: none;
 	}
 
+.menu-page .menu-filters label,
+.filter-list label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.menu-page .menu-filters label input,
+.filter-list label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+
+.menu-page .menu-filters label:hover input ~ .radiomark,
+.menu-page .menu-filters label:hover input ~ .checkmark,
+.filter-list label:hover input ~ .radiomark,
+.filter-list label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.menu-page .menu-filters label input:checked ~ .radiomark,
+.filter-list label input:checked ~ .radiomark {
+  background-color: #2196F3;
+}
+
+.radiomark:after,
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.menu-page .menu-filters label input:checked ~ .radiomark:after,
+.menu-page .menu-filters label input:checked ~ .checkmark:after,
+.filter-list label input:checked ~ .radiomark:after,
+.filter-list label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.menu-page .menu-filters label .radiomark:after,
+.filter-list label .radiomark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ed1c23;
+}
+
+.menu-page .menu-filters label .checkmark:after,
+.filter-list label .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #ed1c23;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
 
 	@media (max-width: 700px) {
 		.menu-page {
@@ -487,6 +582,31 @@ header .menu-items a {
 
 			#drop-filters h4 a {
 				color: #fff;
+			}
+
+			#drop-filters .filter-list {
+				display: none;
+			    margin: 0 auto;
+			    width: 80%;
+			}
+
+			#drop-filters .filter-list,
+			#drop-filters .filter-list h3 {
+				color: #fff;
+			}
+
+			#drop-filters .filter-list h3 {
+				margin: 0;
+			}
+
+			#drop-filters .filter-list ul {
+				padding: 0 10px;
+				display:flex;
+				flex-wrap: wrap;
+			}
+
+			#drop-filters .filter-list ul li {
+				width: 50%;
 			}
 
 		#filter-toggle {
