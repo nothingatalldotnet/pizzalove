@@ -427,6 +427,16 @@ header .menu-items a {
 		    padding: 10px;
 		}
 
+		.menu-content .product .product-information {
+			display: flex;
+		}
+
+		.menu-content .product .product-information div,
+		.menu-content .product .product-information img {
+			width: 50%;
+		}
+
+
 		.menu-content .product a.cover {
 			position: absolute;
 			top: 0;
