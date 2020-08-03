@@ -83,13 +83,13 @@ for($i=0; $i < count($tag_array); $i++) {
 			}
 
 			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
-			echo '	<img src="'.$prod_image.'">';
 			echo '	<div>';
 			echo '		<h3>'.$prod_name.'</h3>';
 			echo '		<p>'.$prod_excerpt.'</p>';
 			echo '		<a href="'.$prod_url.'" class="red-button">Buy</a>';
 			echo '		<div class="tags">'.$prod_tag_display."</div>";
 			echo '	</div>';
+			echo '	<img src="'.$prod_image.'">';
 			echo '	<a href="'.$prod_url.'" class="cover"></a>';
 			echo '</div>';
 
