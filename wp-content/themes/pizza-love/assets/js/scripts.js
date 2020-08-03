@@ -45,9 +45,9 @@ var General = {
 	},
 
 	bindEvents: function() {
-		jQuery('.menu-filters input[type=radio]').on('click', General.filterItems);
-		jQuery('.menu-filters input[type=checkbox]').on('click', General.filterItems);
-		jQuery('#drop-filters').on('click', General.toggleFilterDropdown);
+		jQuery('.menu-filters input[type=radio], .filter-list input[type=radio]').on('click', General.filterItems);
+		jQuery('.menu-filters input[type=checkbox], .filter-list input[type=checkbox]').on('click', General.filterItems);
+		jQuery('.filter-title').on('click', General.toggleFilterDropdown);
 	},
 
 	toggleFilterDropdown: function(e) {
@@ -60,22 +60,35 @@ var General = {
 			category = "",
 			tags = "";
 		
-		category = jQuery(".menu-filters input[type=radio]:checked").val();
+		if(jQuery(window).width() <= 700) {
+			category = jQuery(".filter-list input[type=radio]:checked").val();
+		} else {
+			category = jQuery(".menu-filters input[type=radio]:checked").val();
+		}
 
-		jQuery('.menu-filters input[type=checkbox]:checked').each(function() {
-			if(category !== "") {
-				filter_string += '.'+category+'.'+$(this).val()+', ';	
-			} else {
-				filter_string += '.'+$(this).val()+', ';	
-			}
-		});
+		if(jQuery(window).width() <= 700) {
+			jQuery('.filter-list input[type=checkbox]:checked').each(function() {
+				if(category !== "") {
+					filter_string += '.'+category+'.'+jQuery(this).val()+', ';	
+				} else {
+					filter_string += '.'+jQuery(this).val()+', ';	
+				}
+			});
+		} else {
+			jQuery('.menu-filters input[type=checkbox]:checked').each(function() {
+				if(category !== "") {
+					filter_string += '.'+category+'.'+jQuery(this).val()+', ';	
+				} else {
+					filter_string += '.'+jQuery(this).val()+', ';	
+				}
+			});
+		}
 
 		filter_string = filter_string.replace(/,\s*$/, "");
 
 		if((filter_string === "")&&(category !== "")) {
 			filter_string = '.'+category;
 		} 
-
 
 		if(filter_string === "") {
 			filter_string = "*";

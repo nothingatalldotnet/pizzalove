@@ -89,6 +89,7 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '		<a href="'.$prod_url.'" class="red-button">Buy</a>';
 			echo '		<div class="tags">'.$prod_tag_display."</div>";
 			echo '	</div>';
+			echo '	<a href="'.$prod_url.'" class="cover"></a>';
 			echo '</div>';
 
 		}
