@@ -47,6 +47,11 @@ var General = {
 	bindEvents: function() {
 		jQuery('.menu-filters input[type=radio]').on('click', General.filterItems);
 		jQuery('.menu-filters input[type=checkbox]').on('click', General.filterItems);
+		jQuery('#drop-filters').on('click', General.toggleFilterDropdown);
+	},
+
+	toggleFilterDropdown: function(e) {
+		jQuery('.indicator').toggleClass('glyphicon-chevron-down-custom glyphicon-chevron-up-custom');
 	},
 
 	filterItems: function() {

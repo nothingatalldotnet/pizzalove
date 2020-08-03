@@ -15,7 +15,10 @@
 
 ?>
 	<div class="content">
-		<div class="flex menu-page padded">
+		<div id="drop-filters">
+        	<h4 class="filter-title"> <a data-toggle="collapse"> Categories <i class="indicator glyphicon glyphicon-chevron-down-custom  pull-right"><span class="sp-1"></span><span class="sp-2"></span></i> </a> </h4>
+		</div>
+		<div class="menu-page padded">
 			<div class="menu-content">
 <?php
 	$cat_args = array(
@@ -75,10 +78,7 @@
 ?>
 			</div>
 
-			<div id="" class="menu-filters">
-				<div class="filters-title">
-					<h3>Categories</h3>
-				</div>
+			<div class="menu-filters">
 				<div class="filters">
 					<h3>Categories</h3>
 					<ul>

@@ -350,6 +350,10 @@ header .menu-items a {
 		    padding: 40px 0 40px 40px;
 		}
 		@media (max-width: 700px) {
+			.block-cta {
+				padding: 20px;
+			}
+
 			.block-cta img {
 				display: none;
 			}
@@ -364,12 +368,14 @@ header .menu-items a {
 
 			.block-popular article img {
 				width: 80%;
+			    margin: auto;
 			}
 
 			.block-popular article div {
 				width: 80%;
     			padding-bottom: 18px;
     			text-align: center;
+			    margin: auto;
 			}
 
 
@@ -399,6 +405,107 @@ header .menu-items a {
 
 	.block-about: {
 
+	}
+
+/***************************
+* MENU STYLES
+***************************/
+
+.menu-page {
+	display: flex;
+}
+
+	.menu-page .menu-content {
+		flex: 75%;
+	    flex-wrap:wrap;
+	}
+
+		.menu-content .product {
+			width: 40%;
+			border: solid 1px #ED1C24;
+			margin: 10px;
+		    padding: 10px;
+		}
+
+		.menu-content .product .tags span {
+			background-color:#000;
+			display: inline-block;
+			cursor: pointer;
+			color: #fff;
+			font-size: 8px;
+			font-weight: bold;
+			padding: 4px 4px;
+			text-decoration: none;
+		}
+
+	.menu-page .menu-filters {
+		flex: 25%;
+	}
+
+	#drop-filters {
+		display: none;
+	}
+
+
+	@media (max-width: 700px) {
+		.menu-page {
+			display:block;
+			flex-direction: column-reverse;
+		}
+
+		.menu-page .menu-content,
+		.menu-page .menu-filters {
+			flex: 100%;
+		}
+
+
+		.menu-content .product {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu-content .product > div {
+		    padding: 10px;
+		}
+
+		.menu-page .menu-filters .filters {
+			display: none;
+		}
+
+		#drop-filters {
+			display: block;
+			flex: 100%;
+			background: #000;
+		}
+
+			#drop-filters h4 {
+				margin: 0 auto;
+				width: 80%;
+				padding: 20px 0 20px 0;
+			}
+
+			#drop-filters h4 a {
+				color: #fff;
+			}
+
+		#filter-toggle {
+			display: block;
+			position: relative;
+			top: 50px;
+			z-index: 1;
+			-webkit-user-select: none;
+			user-select: none;
+		}
+
+		.indicator {
+			float: right;
+		}
+
+		.glyphicon-chevron-down-custom span, .glyphicon-chevron-up-custom span {width: 10px; height: 5px; background-color: rgb(255, 255, 255); display: inline-block; transition: all .1s linear;}
+		.glyphicon-chevron-down-custom .sp-1, .glyphicon-chevron-up-custom .sp-2 {transform: skewY(-40deg);}
+		.glyphicon-chevron-up-custom .sp-1, .glyphicon-chevron-down-custom .sp-2 {transform: skewY(40deg);}
+		.glyphicon {top: -2px;}
 	}
 
 
