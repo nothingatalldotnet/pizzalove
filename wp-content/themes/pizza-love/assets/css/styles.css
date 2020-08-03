@@ -518,7 +518,7 @@ header .menu-items a {
 
 .menu-page .menu-filters label input:checked ~ .radiomark,
 .filter-list label input:checked ~ .radiomark {
-  background-color: #2196F3;
+  background-color: #eee;
 }
 
 .radiomark:after,
