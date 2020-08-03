@@ -70,6 +70,7 @@ for($i=0; $i < count($tag_array); $i++) {
 			$prod_name = get_the_title();
 			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms(get_the_ID(), 'product_tag');
+			$prod_image = get_the_post_thumbnail_url();
 
 			$prod_tag_display = "";
 			$prod_tag_class = "";
