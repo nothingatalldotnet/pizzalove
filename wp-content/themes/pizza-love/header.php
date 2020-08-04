@@ -28,7 +28,7 @@
 			<nav class="fixed-nav-bar">
 				<div id="menu" class="menu">
 					<h1>
-						<a class="logo" href="<?php echo site_url(); ?>" title="Home">
+						<a class="logo" href="<?php echo site_url(); ?>" title="PizzaLove Home">
 							<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.svg'; ?>" class="site-logo" alt="PizzaLove Logo">
 						</a>
 					</h1>
@@ -36,13 +36,13 @@
 						<ul class="social menu-items">
 <?php
 	if(get_field('social_facebook', 'option') != "") {
-		echo '<li><a href="'.get_field('social_facebook', 'option').'" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a></li>';
+		echo '<li><a href="'.get_field('social_facebook', 'option').'" target="_blank" title="PizzaLove on Facebook"><i class="fab fa-facebook-f fa-lg"></i></a></li>';
 	}
 	if(get_field('social_twitter', 'option') != "") {
-		echo '<li><a href="https://twitter.com/'.get_field('social_twitter', 'option').'" target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>';		
+		echo '<li><a href="https://twitter.com/'.get_field('social_twitter', 'option').'" target="_blank" title="PizzaLove on Twitter"><i class="fab fa-twitter fa-lg"></i></a></li>';		
 	}
 	if(get_field('social_instagram', 'option') != "") {
-		echo '<li><a href="'.get_field('social_instagram', 'option').'" target="_blank"><i class="fab fa-instagram fa-lg"></i></a></li>';
+		echo '<li><a href="'.get_field('social_instagram', 'option').'" target="_blank" title="PizzaLove on Instagram"><i class="fab fa-instagram fa-lg"></i></a></li>';
 	}
 ?>
 						</ul>
