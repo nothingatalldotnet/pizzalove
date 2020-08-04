@@ -102,6 +102,120 @@ if(have_posts()) {
 		<div class="block-times padded">
 			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
 			<div>
+				<table>
+					<tr>
+						<td>Monday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$monday_group = get_field('monday');
+	if($monday_group['openclosed']) {
+		$open  = $monday_group['open'];
+		$closed  = $monday_group['close'];
+	}
+
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Monday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$monday_group = get_field('monday');
+	if($monday_group['openclosed']) {
+		$open  = $monday_group['open'];
+		$closed  = $monday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Tuesday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$tuesday_group = get_field('tuesday');
+	if($tuesday_group['openclosed']) {
+		$open  = $tuesday_group['open'];
+		$closed  = $tuesday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Wednesday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$wednesday_group = get_field('wednesday');
+	if($wednesday_group['openclosed']) {
+		$open  = $wednesday_group['open'];
+		$closed  = $wednesday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Thursday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$thursday_group = get_field('monday');
+	if($thursday_group['openclosed']) {
+		$open  = $thursday_group['open'];
+		$closed  = $thursday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Friday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$friday_group = get_field('monday');
+	if($friday_group['openclosed']) {
+		$open  = $friday_group['open'];
+		$closed  = $friday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+					<tr>
+						<td>Saturday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$saturday_group = get_field('monday');
+	if($saturday_group['openclosed']) {
+		$open  = $saturday_group['open'];
+		$closed  = $saturday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+						<td>Sunday</td>
+<?php
+	$open = "Closed"
+	$closed = "Closed"
+	$sunday_group = get_field('monday');
+	if($sunday_group['openclosed']) {
+		$open  = $sunday_group['open'];
+		$closed  = $sunday_group['close'];
+	}
+?>
+						<td><?php echo $open ?></td>
+						<td><?php echo $closed ?></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 
