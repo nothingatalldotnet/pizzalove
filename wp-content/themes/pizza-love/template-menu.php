@@ -94,7 +94,6 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
-			echo '	<a href="'.$prod_url.'" class="cover"></a>';
 			echo '</div>';
 			continue;
 		}
