@@ -113,7 +113,6 @@ header .logo img{
 header .menus {
 	display: inline-block;
     vertical-align: top;
-    width: 60%;
     text-align: right;
 }
 
@@ -351,11 +350,16 @@ header .menu-items a {
 		}
 		@media (max-width: 700px) {
 			.block-cta {
-				padding: 20px;
+				margin-bottom: 20px;
 			}
 
 			.block-cta img {
 				display: none;
+			}
+
+			.block-cta div a {
+				margin-left: 40px;
+				margin-bottom: 20px;
 			}
 		}
 
@@ -659,6 +663,9 @@ footer {
     padding: 24px 18px;
     border-top: 1px solid #000;
     flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 	footer .logo {
@@ -672,4 +679,13 @@ footer {
 		margin-right: 20px;
 		margin-left: 10px;
 		max-width: 344px;
+	}
+
+	footer .footer-cred {
+		color: #fff;
+		font-size: 12px;
+	}
+
+	footer .footer-cred a {
+		text-decoration: none;
 	}
