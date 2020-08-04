@@ -301,7 +301,9 @@ header .menu-items a {
 .block-popular h2,
 .block-latest-news h2,
 .block-signup h2,
-.block-map h2 {
+.block-map h2,
+.block-signup h2,
+.block-times h2 {
 	font-size: 30px
 }
 
