@@ -57,7 +57,7 @@ if(have_posts()) {
 			$this_pizza_short_text = get_sub_field('short_text');
 			$this_pizza = wc_get_product($this_pizza_id);
 			$this_pizza_title = $this_pizza->get_name();
-			$this_pizza_add_to_cart = site_url()."basket?add-to-cart=".$this_pizza_id;
+			$this_pizza_add_to_cart = site_url()."/basket?add-to-cart=".$this_pizza_id;
 ?>
 				<article>
 					<img src="/wp-content/themes/pizza-love/assets/images/pizza.png">
