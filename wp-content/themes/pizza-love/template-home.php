@@ -26,11 +26,10 @@ if(have_posts()) {
 		$contact_title_black = get_field('contact_title_black');
 		$contact_title_red = get_field('contact_title_red');
 		$contact_text = get_field('contact_text'); 
-
 		$opening_title_black = get_field('opening_times_title_black');
-		$opening_title_red = get_filed('opening_times_title_red');
-		$signup_title_black = get_filed('signup_title_black');
-		$signup_title_red = get_filed('signup_title_red');
+		$opening_title_red = get_field('opening_times_title_red');
+		$signup_title_black = get_field('signup_title_black');
+		$signup_title_red = get_field('signup_title_red');
 	}
 }
 ?>
