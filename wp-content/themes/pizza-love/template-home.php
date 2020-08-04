@@ -26,6 +26,11 @@ if(have_posts()) {
 		$contact_title_black = get_field('contact_title_black');
 		$contact_title_red = get_field('contact_title_red');
 		$contact_text = get_field('contact_text'); 
+
+		$opening_title_black = get_field('opening_times_title_black');
+		$opening_title_red = get_filed('opening_times_title_red');
+		$signup_title_black = get_filed('signup_title_black');
+		$signup_title_red = get_filed('signup_title_red');
 	}
 }
 ?>
@@ -81,6 +86,22 @@ if(have_posts()) {
 			</div>
 		</div>
 
+		<div class="block-times padded">
+			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
+		</div>
+
+		<div class="block-signup padded">
+			<h2><?php echo $signup_title_black; ?>  <span class="red"><?php echo $signup_title_red; ?></span></h2>
+			<div id="mc_embed_signup" class="notice">
+				<form action="https://pizza-love.us10.list-manage.com/subscribe/post?u=e604c7e138bbb47c93fcd753b&amp;id=c30d23d4e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e604c7e138bbb47c93fcd753b_c30d23d4e8" tabindex="-1" value=""></div>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</div>
+				</form>
+			</div>
+		</div>
 
 
 	</div>
