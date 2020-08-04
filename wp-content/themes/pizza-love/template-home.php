@@ -12,6 +12,8 @@
 			$banner_text = get_field('banner_text');
 			$banner_cta_link = get_field('banner_cta_button_link');
 			$banner_cta_text = get_field('banner_cta_button_text');
+			$banner_cta_phone = get_field('banner_cta_button_phone_number');
+			$banner_cta_phone_text = get_field('banner_cta_button_phone_text');
 			$banner_image = get_field('banner_image');
 			$about_title_black = get_field('about_title_black');
 			$about_title_red = get_field('about_title_red');
@@ -38,6 +40,7 @@
 				<h2 class="title"><?php echo $banner_title_black; ?> <span class="red"><?php echo $banner_title_red; ?></span></h2>
 				<?php echo $banner_text; ?><br><br>
 				<a href="<?php echo $banner_cta_link; ?>" class="red-button"><?php echo $banner_cta_text; ?></a>
+				<a href="tel:<?php echo $banner_cta_phone; ?>" class="red-button"><?php echo $banner_cta_phone_text; ?></a>
 			</div>
 		</div>
 
@@ -95,7 +98,6 @@
 				</form>
 			</div>
 		</div>
-
 
 		<div class="block-times padded">
 			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
