@@ -887,6 +887,41 @@
                     "return_format": ""
                 }
             ]
+        },
+        {
+            "key": "field_5f298bd91f4f5",
+            "label": "404 Page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f298bea1f4f7",
+            "label": "404 Text",
+            "name": "404_text",
+            "type": "textarea",
+            "instructions": "This text is shown if the page does not exist",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -906,5 +941,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596550609
+    "modified": 1596558342
 }
