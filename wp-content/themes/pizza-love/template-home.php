@@ -99,9 +99,45 @@
 			</div>
 		</div>
 
-		<div class="block-times padded">
-			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
-			<div>
+		<div class="block-map padded">
+			<h2><?php echo $contact_title_black; ?> <span class="red"><?php echo $contact_title_red; ?></span></h2>
+			<div class="flex">
+				<div class="left">
+					<img src="/wp-content/themes/pizza-love/assets/images/map.png">
+				</div>
+				<div class="right"><?php echo $contact_text; ?>
+					<ul>
+<?php
+		if(get_field('contact_email', 'option') != "") {
+			echo '<li><i class="fas fa-envelope"></i><span>'.get_field("contact_email", "option").'</span></li>';
+		}
+		if(get_field('contact_phone', 'option') != "") {
+			echo '<li><i class="fas fa-phone"></i><span>'.get_field("contact_phone", "option").'</span></li>';
+		}
+		if(get_field('contact_address_1', 'option') != "") {
+			echo '<li><i class="fas fa-store"></i><span>'.get_field("contact_address_1", "option");
+			if(get_field('contact_address_2', 'option') != "") {
+				echo '<br>'.get_field("contact_address_2", "option");
+			}
+			if(get_field('contact_address_3', 'option') != "") {
+				echo '<br>'.get_field("contact_address_3", "option");
+			}
+			if(get_field('contact_town', 'option') != "") {
+				echo '<br>'.get_field("contact_town", "option");
+			}
+			if(get_field('contact_country', 'option') != "") {
+				echo '<br>'.get_field("contact_country", "option");
+			}
+			if(get_field('contact_postcode', 'option') != "") {
+				echo '<br>'.get_field("contact_postcode", "option");
+			}
+			echo '</span></li>';
+		}
+?>					</ul>
+
+
+
+				<h3><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h3>
 				<table>
 					<tr>
 						<td>Monday</td>
@@ -215,6 +251,9 @@
 						<td><?php echo $closed; ?></td>
 					</tr>
 				</table>
+
+
+				</div>
 			</div>
 		</div>
 	</div>

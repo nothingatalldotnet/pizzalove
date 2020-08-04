@@ -419,6 +419,26 @@ header .menu-items a {
 		padding: 20px 0 20px 0;
 	}
 
+	.block-map div.left {
+		flex: 40%;
+	}
+
+	.block-map div.right {
+		flex: 60%;
+	}
+
+	.block-map ul li {
+		font-size: 20px;
+		color: #ED1C24;
+		margin: 0 0 8px 0;
+	}
+
+	.block-map ul li span {
+		margin-left: 16px;
+		display: inline-flex;
+		color: #000;
+	}
+
 /***************************
 * MENU STYLES
 ***************************/
