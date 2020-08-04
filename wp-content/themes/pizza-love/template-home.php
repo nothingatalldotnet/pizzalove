@@ -113,10 +113,9 @@ if(have_posts()) {
 		$open  = $monday_group['open'];
 		$closed  = $monday_group['close'];
 	}
-
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Monday</td>
@@ -129,8 +128,8 @@ if(have_posts()) {
 		$closed  = $monday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Tuesday</td>
@@ -143,8 +142,8 @@ if(have_posts()) {
 		$closed  = $tuesday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Wednesday</td>
@@ -157,8 +156,8 @@ if(have_posts()) {
 		$closed  = $wednesday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Thursday</td>
@@ -171,8 +170,8 @@ if(have_posts()) {
 		$closed  = $thursday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Friday</td>
@@ -185,8 +184,8 @@ if(have_posts()) {
 		$closed  = $friday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
 						<td>Saturday</td>
@@ -199,8 +198,8 @@ if(have_posts()) {
 		$closed  = $saturday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 						<td>Sunday</td>
 <?php
@@ -212,8 +211,8 @@ if(have_posts()) {
 		$closed  = $sunday_group['close'];
 	}
 ?>
-						<td><?php echo $open ?></td>
-						<td><?php echo $closed ?></td>
+						<td><?php echo $open; ?></td>
+						<td><?php echo $closed; ?></td>
 					</tr>
 				</table>
 			</div>
