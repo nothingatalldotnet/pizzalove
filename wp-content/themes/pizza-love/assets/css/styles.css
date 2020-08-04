@@ -676,7 +676,6 @@ header .menu-items a {
 	.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
 	.woocommerce .cart .button, .woocommerce .cart input.button {
 		background-color:#ed1c23;
-		display: inline-block;
 		cursor: pointer;
 		color: #ffffff;
 		font-size: 15px;
