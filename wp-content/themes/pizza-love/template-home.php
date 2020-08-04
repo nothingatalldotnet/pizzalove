@@ -85,11 +85,7 @@ if(have_posts()) {
 			</div>
 		</div>
 
-		<div class="block-times padded">
-			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
-		</div>
-
-		<div class="block-signup padded">
+		<div class="block-signup">
 			<h2><?php echo $signup_title_black; ?>  <span class="red"><?php echo $signup_title_red; ?></span></h2>
 			<div id="mc_embed_signup" class="notice">
 				<form action="https://pizza-love.us10.list-manage.com/subscribe/post?u=e604c7e138bbb47c93fcd753b&amp;id=c30d23d4e8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -99,6 +95,13 @@ if(have_posts()) {
 						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 					</div>
 				</form>
+			</div>
+		</div>
+
+
+		<div class="block-times padded">
+			<h2><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h2>
+			<div>
 			</div>
 		</div>
 
