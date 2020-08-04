@@ -654,6 +654,54 @@ header .menu-items a {
 
 
 /***************************
+* BASKET STYLES
+***************************/
+	.woocommerce table.shop_table {
+		border: 0;
+		border-radius: 0;
+	}
+
+	.woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled] {
+		background-color:#ed1c23;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 16px 31px;
+		text-decoration: none;
+		border-radius: 0;
+	}
+
+	.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+	.woocommerce .cart .button, .woocommerce .cart input.button {
+		background-color:#ed1c23;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 16px 31px;
+		text-decoration: none;
+		border-radius: 0;
+	}
+
+	.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+
+	}
+
+	.woocommerce .cart .button:hover, .woocommerce .cart input.button:hover {
+		background-color:#ed1c23;
+		color: #ffffff;
+	}
+
+	.woocommerce-cart table.cart td.actions .coupon .input-text {
+		height: 47px;
+		width: 140px;
+	}
+
+
+/***************************
 * FOOTER STYLES
 ***************************/
 footer {
