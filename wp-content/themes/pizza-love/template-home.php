@@ -154,20 +154,6 @@
 						<td><?php echo $closed; ?></td>
 					</tr>
 					<tr>
-						<td>Monday</td>
-<?php
-	$open = "Closed";
-	$closed = "Closed";
-	$monday_group = get_field('monday');
-	if($monday_group['openclosed']) {
-		$open  = $monday_group['open'];
-		$closed  = $monday_group['close'];
-	}
-?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
 						<td>Tuesday</td>
 <?php
 	$open = "Closed";
