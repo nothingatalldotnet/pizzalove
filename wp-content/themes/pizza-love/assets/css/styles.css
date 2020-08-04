@@ -703,7 +703,8 @@ header .menu-items a {
 	}
 
 	.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
-	.woocommerce .cart .button, .woocommerce .cart input.button {
+	.woocommerce .cart .button, .woocommerce .cart input.button,
+	.woocommerce a.button {
 		background-color:#ed1c23;
 		cursor: pointer;
 		color: #ffffff;
