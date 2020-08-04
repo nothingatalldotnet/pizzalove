@@ -106,8 +106,8 @@ if(have_posts()) {
 					<tr>
 						<td>Monday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
+	$open = "Closed";
+	$closed = "Closed";
 	$monday_group = get_field('monday');
 	if($monday_group['openclosed']) {
 		$open  = $monday_group['open'];
@@ -120,8 +120,8 @@ if(have_posts()) {
 					<tr>
 						<td>Monday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
+	$open = "Closed";
+	$closed = "Closed";
 	$monday_group = get_field('monday');
 	if($monday_group['openclosed']) {
 		$open  = $monday_group['open'];
@@ -134,8 +134,8 @@ if(have_posts()) {
 					<tr>
 						<td>Tuesday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
+	$open = "Closed";
+	$closed = "Closed";
 	$tuesday_group = get_field('tuesday');
 	if($tuesday_group['openclosed']) {
 		$open  = $tuesday_group['open'];
@@ -148,8 +148,8 @@ if(have_posts()) {
 					<tr>
 						<td>Wednesday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
+	$open = "Closed";
+	$closed = "Closed";
 	$wednesday_group = get_field('wednesday');
 	if($wednesday_group['openclosed']) {
 		$open  = $wednesday_group['open'];
@@ -162,9 +162,9 @@ if(have_posts()) {
 					<tr>
 						<td>Thursday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
-	$thursday_group = get_field('monday');
+	$open = "Closed";
+	$closed = "Closed";
+	$thursday_group = get_field('thursday');
 	if($thursday_group['openclosed']) {
 		$open  = $thursday_group['open'];
 		$closed  = $thursday_group['close'];
@@ -176,9 +176,9 @@ if(have_posts()) {
 					<tr>
 						<td>Friday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
-	$friday_group = get_field('monday');
+	$open = "Closed";
+	$closed = "Closed";
+	$friday_group = get_field('friday');
 	if($friday_group['openclosed']) {
 		$open  = $friday_group['open'];
 		$closed  = $friday_group['close'];
@@ -190,9 +190,9 @@ if(have_posts()) {
 					<tr>
 						<td>Saturday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
-	$saturday_group = get_field('monday');
+	$open = "Closed";
+	$closed = "Closed";
+	$saturday_group = get_field('saturday');
 	if($saturday_group['openclosed']) {
 		$open  = $saturday_group['open'];
 		$closed  = $saturday_group['close'];
@@ -203,9 +203,9 @@ if(have_posts()) {
 					</tr>
 						<td>Sunday</td>
 <?php
-	$open = "Closed"
-	$closed = "Closed"
-	$sunday_group = get_field('monday');
+	$open = "Closed";
+	$closed = "Closed";
+	$sunday_group = get_field('sunday');
 	if($sunday_group['openclosed']) {
 		$open  = $sunday_group['open'];
 		$closed  = $sunday_group['close'];
