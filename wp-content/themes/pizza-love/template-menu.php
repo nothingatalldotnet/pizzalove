@@ -20,7 +20,7 @@
         	<div class="filter-list">
 				<h3>Categories</h3>
 				<ul>
-					<li><label>All <input type='radio' name='category' value='' checked><span class='radiomark'></span></label></li>
+					<li><label>All <input type='radio' name='category' class="all" checked="checked" value=''><span class='radiomark'></span></label></li>
 <?php
 	for($i=0; $i < count($category_array); $i++) {
 		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
@@ -67,9 +67,11 @@ for($i=0; $i < count($tag_array); $i++) {
 		$products = new WP_Query($product_args);
 		while($products->have_posts()) {
 			$products->the_post();
+			$prod_id = get_the_ID();
 			$prod_name = get_the_title();
-			$prod_url = get_the_permalink();
-			$prod_tags = get_the_terms(get_the_ID(), 'product_tag');
+//			$prod_url = get_the_permalink();
+			$prod_url = site_url()."/basket?add-to-cart=".$prod_id;
+			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
 
 			$prod_tag_display = "";
@@ -105,7 +107,7 @@ for($i=0; $i < count($tag_array); $i++) {
 				<div class="filters">
 					<h3>Categories</h3>
 					<ul>
-						<li><label>All <input type='radio' name='category' value='' checked><span class='radiomark'></span></label></li>
+						<li><label>All <input type='radio' name='category' value='' class="all" checked="checked"><span class='radiomark'></span></label></li>
 <?php
 	for($i=0; $i < count($category_array); $i++) {
 		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";

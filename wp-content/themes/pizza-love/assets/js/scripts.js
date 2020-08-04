@@ -10,6 +10,8 @@ var General = {
 	},
 
 	initIsotope: function() {
+		jQuery('.all').prop("checked",true);
+
         jQuery(".menu-content").isotope({
             layoutMode: 'fitRows',
             itemSelector: '.product',
