@@ -439,6 +439,16 @@ header .menu-items a {
 		color: #000;
 	}
 
+	@media (max-width: 700px) {
+		.block-map div.flex {
+			display: block;
+		}
+
+		.block-map div.left {
+			overflow: hidden;
+		}
+	}
+
 /***************************
 * MENU STYLES
 ***************************/

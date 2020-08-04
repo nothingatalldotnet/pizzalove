@@ -251,9 +251,6 @@
 						<td><?php echo $closed; ?></td>
 					</tr>
 				</table>
-
-
-				</div>
 			</div>
 		</div>
 	</div>
