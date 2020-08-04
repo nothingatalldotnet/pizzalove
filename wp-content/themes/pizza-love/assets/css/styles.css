@@ -729,6 +729,12 @@ header .menu-items a {
 		width: 140px;
 	}
 
+	.cart-empty,
+	.woocommerce-info,
+	.woocommerce-message {
+		border-top-color: #ed1c23;
+	}
+
 
 /***************************
 * MCE STYLES
