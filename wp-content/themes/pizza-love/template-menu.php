@@ -91,50 +91,24 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '	<div class="product-information">';
 			echo '		<div>';
 			echo '			<h3>'.$prod_name.'</h3>';
-			echo '			<a href="'.$prod_url.'" class="red-button">Buy</a>';
-			echo '			<span class="price">'.$prod_price.'</span>';
-
-			if(is_array($prod_addons) && count($prod_addons) > 0) {
-				foreach($prod_addons as $addon) {
-					if(!isset($addon['field_name'])) {
-						continue;
-					}
-
-					$addon_type = ! empty($addon['type']) ? $addon['type'] : '';
-					$addon_price = ! empty($addon['price']) ? $addon['price'] : '';
-
-					if($addon_type === 'checkbox') {
-						foreach($addon['options'] as $i => $option) {
-							$option_price = ! empty( $option['price'] ) ? $option['price'] : '';
-							$option_price_type = ! empty( $option['price_type'] ) ? $option['price_type'] : '';
-							$price_prefix = 0 < $option_price ? '+' : '';
-							$price_type = $option_price_type;
-							$price_raw = apply_filters( 'woocommerce_product_addons_option_price_raw', $option_price, $option );
-							$field_name = ! empty( $addon['field_name'] ) ? $addon['field_name'] : '';
-							$option_label = ( '0' === $option['label'] ) || ! empty( $option['label'] ) ? $option['label'] : '';
-							$price_display = WC_Product_Addons_Helper::get_product_addon_price_for_display( $price_raw );
-
-							$price_for_display = apply_filters( 'woocommerce_product_addons_option_price', $price_raw ? '(' . $price_prefix . wc_price( WC_Product_Addons_Helper::get_product_addon_price_for_display( $price_raw ) ) . ')' : '', $option, $i, 'checkbox');
-						}
-
-						$selected = isset( $_POST[ 'addon-' . sanitize_title( $field_name ) ] ) ? $_POST[ 'addon-' . sanitize_title( $field_name ) ] : array();
-						if ( ! is_array( $selected ) ) {
-							$selected = array( $selected );
-						}
-
-						$current_value = ( in_array( sanitize_title( $option_label ), $selected ) ) ? 1 : 0;
 ?>
-						<p class="form-row form-row-wide wc-pao-addon-wrap wc-pao-addon-<?php echo sanitize_title( $field_name ) . '-' . $i; ?>">
-							<label>
-								<input type="checkbox" <?php echo $required_html; ?> class="wc-pao-addon-field wc-pao-addon-checkbox" name="addon-<?php echo sanitize_title( $field_name ); ?>[]" data-raw-price="<?php echo esc_attr( $price_raw ); ?>" data-price="<?php echo esc_attr( $price_display ); ?>" data-price-type="<?php echo esc_attr( $price_type ); ?>" value="<?php echo sanitize_title( $option_label ); ?>" data-label="<?php echo esc_attr( wptexturize( $option_label ) ); ?>" /> <?php echo wptexturize( $option_label . ' ' . $price_for_display ); ?>
-							</label>
-						</p>
-
+			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 <?php
-					}
-				}
-			}
+			do_action( 'woocommerce_before_add_to_cart_button' );
+			do_action( 'woocommerce_before_add_to_cart_quantity' );
 
+			woocommerce_quantity_input(
+				array(
+					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+				)
+			);
+
+			do_action( 'woocommerce_after_add_to_cart_quantity' );
+
+			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="ref-button single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
+			echo '			<span class="price">'.$prod_price.'</span>';
 			echo '		</div>';
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
