@@ -15,7 +15,8 @@ var General = {
         jQuery(".menu-content").isotope({
             layoutMode: 'fitRows',
             itemSelector: '.product',
-            percentPosition: true
+            percentPosition: true,
+            resizable: false,
         });
 	},
 

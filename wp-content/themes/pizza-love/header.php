@@ -21,6 +21,36 @@
 				"name":"PizzaLove"
 			}
 		</script>
+		<script type='application/ld+json'>
+			{
+				"@context": "https://schema.org",
+				"@type": "Restaurant",
+				"image": [
+					"https://example.com/photos/16x9/photo.jpg"
+				],
+				"@id": "https://pizza-love.co.uk",
+				"name": "PizzaLove",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "<?php echo get_field('contact_address_1', 'option').', '. get_field('contact_address_3', 'option'); ?>",
+					"addressLocality": "<?php echo get_field('contact_town', 'option'); ?>",
+					"addressRegion": "<?php echo get_field('contact_region', 'option'); ?>",
+					"postalCode": "<?php echo get_field('contact_postcode', 'option'); ?>",
+					"addressCountry": "<?php echo get_field('contact_country', 'option'); ?>"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 
+					"longitude": 
+				},
+				"url":"https://pizza-love.co.uk",
+				"telephone": "",
+				"servesCuisine": "Pizza",
+				"priceRange": "$",
+				"menu": "https://pizza-love.co.uk/menu",
+				"acceptsReservations": "false"
+			}
+		</script>
 	</head>
 	<body <?php body_class(); ?>>
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFFS8BK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

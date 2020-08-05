@@ -540,6 +540,10 @@ header .menu-items a {
 		.menu-content .product .product-information img {
 			width: 50%;
 		}
+		
+		.menu-content .product .product-information img {
+			height: 50%;
+		}
 
 		.menu-content .product .product-information form {
 			margin-bottom: 0;
