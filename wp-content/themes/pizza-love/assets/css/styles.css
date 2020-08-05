@@ -278,6 +278,7 @@ header .menu-items a {
 .content {
 	flex: 1 0 auto;
 	order: 2;
+	margin-bottom: 0.83em;
 }
 
 .padded {
@@ -438,6 +439,11 @@ header .menu-items a {
 		flex: 60%;
 	}
 
+	.block-map div.right table {
+		width: 70%;
+	}
+
+
 	.block-map ul li {
 		font-size: 20px;
 		color: #ED1C24;
@@ -457,6 +463,19 @@ header .menu-items a {
 
 		.block-map div.left {
 			overflow: hidden;
+		}
+
+		.block-map div.left .gmap_canvas {
+			width: 100%;
+			height: 300px;
+		}
+
+		.block-map div.left .gmap_canvas iframe {
+			width: 100%;
+		}
+
+		.block-map div.right table {
+			width: 100%;
 		}
 	}
 
