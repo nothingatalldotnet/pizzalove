@@ -91,7 +91,7 @@
 	 * Update the footer
 	 */
 	function remove_footer_admin () {
- 		echo "Bolted together by <a href='https://nothingatall.net/' target='_blank'>nothingatall.net</a>";
+ 		echo "Bolted together by <a href='https://nothingatall.net/' target='_blank'>nothingatall dot net</a>";
 	}
 	add_filter('admin_footer_text', 'remove_footer_admin');
 
@@ -192,7 +192,9 @@
 	}
 	add_filter('body_class','wt_browser_body_class');
 
-
+	/**
+	 * Stupid login style
+	 */
 	function loginLogo() {
 ?>
 		<style type="text/css">
