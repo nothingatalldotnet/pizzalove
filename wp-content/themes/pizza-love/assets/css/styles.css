@@ -540,7 +540,7 @@ header .menu-items a {
 		.menu-content .product .product-information img {
 			width: 50%;
 		}
-		
+
 		.menu-content .product .product-information img {
 			height: 50%;
 		}
@@ -685,7 +685,7 @@ header .menu-items a {
 			width: 100%;
 			margin: 0;
 			padding: 0;
-			margin-bottom: 10px;
+			margin-bottom: 10px !important;
 		}
 
 		.menu-content .product > div {
