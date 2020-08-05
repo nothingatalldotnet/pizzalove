@@ -470,10 +470,6 @@ header .menu-items a {
 		    padding: 10px;
 		}
 
-		.menu-content .product h3 {
-			margin-left: 10px;
-		}
-
 		.menu-content .product .product-information {
 			display: flex;
 		}
@@ -498,8 +494,9 @@ header .menu-items a {
 			text-decoration: none;
 		}
 
-		.product-information .woocommerce div.product form.cart div.quantity {
-			padding-bottom: 10px;
+		.product-information form .woocommerce div.product form.cart {
+			position: absolute;
+			bottom: 30px;
 		}
 
 	.menu-page .menu-filters {
