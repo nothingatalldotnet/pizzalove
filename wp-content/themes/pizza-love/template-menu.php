@@ -72,10 +72,12 @@ for($i=0; $i < count($tag_array); $i++) {
 			$product = wc_get_product($prod_id);
 			$prod_name = $product->get_name();
 			$prod_addons = WC_Product_Addons_Helper::get_product_addons($prod_id);
-			$prod_url = site_url()."/basket?add-to-cart=".$prod_id;
+			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
 			$prod_price = $product->get_price_html();
+			$prod_sku = $product->get_sku();
+			$prod_price_simple = $product->get_price();
 
 			$prod_tag_display = "";
 			$prod_tag_class = "";
@@ -86,20 +88,47 @@ for($i=0; $i < count($tag_array); $i++) {
 					$prod_tag_display .= '<span>'.$prod_tag->name.'</span> ';
 				}
 			}
-
 			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
-			echo '	<h3>'.$prod_name.'</h3>';
+			echo '	<h3>'.$prod_name.' '.$product->get_price_html().'</h3>';
 			echo '	<div class="product-information">';
 			echo '		<form class="cart" action="'.esc_url(apply_filters("woocommerce_add_to_cart_form_action", $product->get_permalink())).'" method="post" enctype="multipart/form-data">';
-
 			do_action('woocommerce_before_add_to_cart_button');
-			
-			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
-			echo '			<span class="'.esc_attr(apply_filters("woocommerce_product_price_class", "price")).'">'.$product->get_price_html().'</span>';
+			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button margin single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
+			echo '			<a href="'.$prod_url.'" class="black-button margin" title="'.$prod_name.'">More Info</a>';
 			echo '		</form>';
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
+?>
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org/",
+		"@type": "Product",
+		"name": "<?php echo $prod_name; ?>",
+		"image": [
+			"<?php echo $prod_image; ?>"
+		],
+		"description": "",
+		"sku": "<?php echo $prod_sku; ?>",
+		"brand": {
+			"@type": "Brand",
+			"name": "Pizza Love"
+		},
+		"offers": {
+			"@type": "Offer",
+			"url": "<?php echo $prod_url; ?>",
+			"priceCurrency": "GBP",
+			"price": "<?php echo $prod_price_simple; ?>",
+			"itemCondition": "https://schema.org/NewCondition",
+			"availability": "https://schema.org/InStock",
+			"seller": {
+				"@type": "Organization",
+				"name": "Pizza Love"
+			}
+		}
+	}
+    </script>
+<?php
 			echo '</div>';
 		}
 	}

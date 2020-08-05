@@ -55,8 +55,33 @@ a:hover {
 	border-radius: 0  !important;
 }
 
+.red-button.margin {
+	margin-top: 10px;
+}
+
 .red-button:hover {
 	background-color:#ed1c23  !important;
+}
+
+.black-button {
+	background-color:#000 !important;
+	display: inline-block  !important;
+	cursor: pointer  !important;
+	color: #ffffff  !important;
+	font-size: 15px  !important;
+	font-weight: bold  !important;
+	padding: 16px 31px  !important;
+	text-decoration: none  !important;
+	border-radius: 0  !important;
+}
+
+.black-button.margin {
+	margin-top: 10px;
+}
+
+
+.black-button:hover {
+	background-color:#000  !important;
 }
 
 li.active a {
@@ -497,6 +522,10 @@ header .menu-items a {
 			border: solid 1px #ED1C24;
 			margin: 10px;
 		    padding: 10px;
+		}
+
+		.menu-content .product h3 span.woocommerce-Price-amount {
+			float: right;
 		}
 
 		.menu-content .product .product-information {
