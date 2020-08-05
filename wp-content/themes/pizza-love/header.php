@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<?php wp_head(); ?>
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#ED1C24">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<script src="https://kit.fontawesome.com/bb20656c21.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
