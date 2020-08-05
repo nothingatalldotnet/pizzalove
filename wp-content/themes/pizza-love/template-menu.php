@@ -88,28 +88,15 @@ for($i=0; $i < count($tag_array); $i++) {
 			}
 
 			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
+			echo '	<h3>'.$prod_name.'</h3>';
 			echo '	<div class="product-information">';
-			echo '		<div>';
-			echo '			<h3>'.$prod_name.'</h3>';
-?>
-			<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
-<?php
-			do_action( 'woocommerce_before_add_to_cart_button' );
-			do_action( 'woocommerce_before_add_to_cart_quantity' );
+			echo '		<form class="cart" action="'.esc_url(apply_filters("woocommerce_add_to_cart_form_action", $product->get_permalink())).'" method="post" enctype="multipart/form-data">';
 
-			woocommerce_quantity_input(
-				array(
-					'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-					'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-					'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-				)
-			);
-
-			do_action( 'woocommerce_after_add_to_cart_quantity' );
-
-			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="ref-button single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
-			echo '			<span class="price">'.$prod_price.'</span>';
-			echo '		</div>';
+			do_action('woocommerce_before_add_to_cart_button');
+			
+			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
+			echo '			<span class="'.esc_attr(apply_filters("woocommerce_product_price_class", "price")).'">'.$product->get_price_html().'</span>';
+			echo '		</form>';
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";

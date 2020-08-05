@@ -43,19 +43,20 @@ a:hover {
 	color: #ED1C24;
 }
 
-a.red-button {
-	background-color:#ed1c23;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 16px 31px;
-	text-decoration: none;
+.red-button {
+	background-color:#ed1c23 !important;
+	display: inline-block  !important;
+	cursor: pointer  !important;
+	color: #ffffff  !important;
+	font-size: 15px  !important;
+	font-weight: bold  !important;
+	padding: 16px 31px  !important;
+	text-decoration: none  !important;
+	border-radius: 0  !important;
 }
 
-a.red-button:hover {
-	background-color:#ed1c23;
+.red-button:hover {
+	background-color:#ed1c23  !important;
 }
 
 li.active a {
@@ -469,13 +470,21 @@ header .menu-items a {
 		    padding: 10px;
 		}
 
+		.menu-content .product h3 {
+			margin-left: 10px;
+		}
+
 		.menu-content .product .product-information {
 			display: flex;
 		}
 
-		.menu-content .product .product-information div,
+		.menu-content .product .product-information form,
 		.menu-content .product .product-information img {
 			width: 50%;
+		}
+
+		.menu-content .product .product-information form {
+			margin-bottom: 0;
 		}
 
 		.menu-content .product .tags span {
@@ -487,6 +496,10 @@ header .menu-items a {
 			font-weight: bold;
 			padding: 4px 4px;
 			text-decoration: none;
+		}
+
+		.product-information .woocommerce div.product form.cart div.quantity {
+			padding-bottom: 10px;
 		}
 
 	.menu-page .menu-filters {
