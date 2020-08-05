@@ -166,6 +166,10 @@ header .menu-items li {
 	margin-left: 10px;
 }
 
+header .menu .social .phone a {
+	font-size: 20px;
+}
+
 header .menu-items a {
 	text-decoration: none;
 }
