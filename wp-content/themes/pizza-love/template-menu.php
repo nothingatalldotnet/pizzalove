@@ -65,14 +65,17 @@ for($i=0; $i < count($tag_array); $i++) {
 			'orderby' => 'title,'
 		);
 		$products = new WP_Query($product_args);
+
 		while($products->have_posts()) {
 			$products->the_post();
 			$prod_id = get_the_ID();
-			$prod_name = get_the_title();
-//			$prod_url = get_the_permalink();
+			$product = wc_get_product($prod_id);
+			$prod_name = $product->get_name();
+			$prod_addons = WC_Product_Addons_Helper::get_product_addons($prod_id);
 			$prod_url = site_url()."/basket?add-to-cart=".$prod_id;
 			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
+			$prod_price = $product->get_price_html();
 
 			$prod_tag_display = "";
 			$prod_tag_class = "";
@@ -88,14 +91,55 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '	<div class="product-information">';
 			echo '		<div>';
 			echo '			<h3>'.$prod_name.'</h3>';
-			echo '			<p>'.$prod_excerpt.'</p>';
 			echo '			<a href="'.$prod_url.'" class="red-button">Buy</a>';
+			echo '			<span class="price">'.$prod_price.'</span>';
+
+			if(is_array($prod_addons) && count($prod_addons) > 0) {
+				foreach($prod_addons as $addon) {
+					if(!isset($addon['field_name'])) {
+						continue;
+					}
+
+					$addon_type = ! empty($addon['type']) ? $addon['type'] : '';
+					$addon_price = ! empty($addon['price']) ? $addon['price'] : '';
+
+					if($addon_type === 'checkbox') {
+						foreach($addon['options'] as $i => $option) {
+							$option_price = ! empty( $option['price'] ) ? $option['price'] : '';
+							$option_price_type = ! empty( $option['price_type'] ) ? $option['price_type'] : '';
+							$price_prefix = 0 < $option_price ? '+' : '';
+							$price_type = $option_price_type;
+							$price_raw = apply_filters( 'woocommerce_product_addons_option_price_raw', $option_price, $option );
+							$field_name = ! empty( $addon['field_name'] ) ? $addon['field_name'] : '';
+							$option_label = ( '0' === $option['label'] ) || ! empty( $option['label'] ) ? $option['label'] : '';
+							$price_display = WC_Product_Addons_Helper::get_product_addon_price_for_display( $price_raw );
+
+							$price_for_display = apply_filters( 'woocommerce_product_addons_option_price', $price_raw ? '(' . $price_prefix . wc_price( WC_Product_Addons_Helper::get_product_addon_price_for_display( $price_raw ) ) . ')' : '', $option, $i, 'checkbox');
+						}
+
+						$selected = isset( $_POST[ 'addon-' . sanitize_title( $field_name ) ] ) ? $_POST[ 'addon-' . sanitize_title( $field_name ) ] : array();
+						if ( ! is_array( $selected ) ) {
+							$selected = array( $selected );
+						}
+
+						$current_value = ( in_array( sanitize_title( $option_label ), $selected ) ) ? 1 : 0;
+?>
+						<p class="form-row form-row-wide wc-pao-addon-wrap wc-pao-addon-<?php echo sanitize_title( $field_name ) . '-' . $i; ?>">
+							<label>
+								<input type="checkbox" <?php echo $required_html; ?> class="wc-pao-addon-field wc-pao-addon-checkbox" name="addon-<?php echo sanitize_title( $field_name ); ?>[]" data-raw-price="<?php echo esc_attr( $price_raw ); ?>" data-price="<?php echo esc_attr( $price_display ); ?>" data-price-type="<?php echo esc_attr( $price_type ); ?>" value="<?php echo sanitize_title( $option_label ); ?>" data-label="<?php echo esc_attr( wptexturize( $option_label ) ); ?>" /> <?php echo wptexturize( $option_label . ' ' . $price_for_display ); ?>
+							</label>
+						</p>
+
+<?php
+					}
+				}
+			}
+
 			echo '		</div>';
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
 			echo '</div>';
-			continue;
 		}
 	}
 

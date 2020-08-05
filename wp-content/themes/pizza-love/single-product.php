@@ -7,9 +7,7 @@
 			the_post();
 
 			echo '<div class="single-product-wrapper padded">';
-
-				the_content();
-				echo do_shortcode('[product_page]');
+			the_content();
 			echo '</div>';
 		}
 	}
