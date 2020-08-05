@@ -103,7 +103,9 @@
 			<h2><?php echo $contact_title_black; ?> <span class="red"><?php echo $contact_title_red; ?></span></h2>
 			<div class="flex">
 				<div class="left">
-					<img src="/wp-content/themes/pizza-love/assets/images/map.png">
+					<div class="gmap_canvas">
+						<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=ol3%206hx&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+					</div>
 				</div>
 				<div class="right"><?php echo $contact_text; ?>
 					<ul>
@@ -135,12 +137,10 @@
 		}
 ?>					</ul>
 
-
-
-				<h3><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h3>
-				<table>
-					<tr>
-						<td>Monday</td>
+					<h3><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h3>
+					<table>
+						<tr>
+							<td>Monday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -150,11 +150,11 @@
 		$closed  = $monday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
-						<td>Tuesday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+						<tr>
+							<td>Tuesday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -164,11 +164,11 @@
 		$closed  = $tuesday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
-						<td>Wednesday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+						<tr>
+							<td>Wednesday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -178,11 +178,11 @@
 		$closed  = $wednesday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
-						<td>Thursday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+						<tr>
+							<td>Thursday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -192,11 +192,11 @@
 		$closed  = $thursday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
-						<td>Friday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+						<tr>
+							<td>Friday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -206,11 +206,11 @@
 		$closed  = $friday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-					<tr>
-						<td>Saturday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+						<tr>
+							<td>Saturday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -220,10 +220,10 @@
 		$closed  = $saturday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-						<td>Sunday</td>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+							<td>Sunday</td>
 <?php
 	$open = "Closed";
 	$closed = "Closed";
@@ -233,10 +233,11 @@
 		$closed  = $sunday_group['close'];
 	}
 ?>
-						<td><?php echo $open; ?></td>
-						<td><?php echo $closed; ?></td>
-					</tr>
-				</table>
+							<td><?php echo $open; ?></td>
+							<td><?php echo $closed; ?></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

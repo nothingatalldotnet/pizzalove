@@ -424,6 +424,16 @@ header .menu-items a {
 		flex: 40%;
 	}
 
+	.block-map div.left .gmap_canvas {
+		width: 100%;
+		height: 100%;
+	}
+
+	.block-map div.left .gmap_canvas iframe {
+		width: 90%;
+		height: 100%;
+	}
+
 	.block-map div.right {
 		flex: 60%;
 	}
