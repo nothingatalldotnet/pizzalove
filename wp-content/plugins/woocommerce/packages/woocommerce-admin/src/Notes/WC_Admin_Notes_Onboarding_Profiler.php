@@ -88,12 +88,7 @@ class WC_Admin_Notes_Onboarding_Profiler {
 			return;
 		}
 
-		$note = WC_Admin_Notes::get_note( $note_ids[0] );
-
-		if ( false === $note ) {
-			return;
-		}
-
+		$note = new WC_Admin_Note( $note_ids[0] );
 		$note->set_status( 'actioned' );
 		$note->save();
 	}

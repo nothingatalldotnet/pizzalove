@@ -32,10 +32,9 @@ class CartRemoveCoupon extends AbstractCartRoute {
 	public function get_args() {
 		return [
 			[
-				'methods'             => \WP_REST_Server::CREATABLE,
-				'callback'            => [ $this, 'get_response' ],
-				'permission_callback' => '__return_true',
-				'args'                => [
+				'methods'  => \WP_REST_Server::CREATABLE,
+				'callback' => [ $this, 'get_response' ],
+				'args'     => [
 					'code' => [
 						'description' => __( 'Unique identifier for the coupon within the cart.', 'woocommerce' ),
 						'type'        => 'string',

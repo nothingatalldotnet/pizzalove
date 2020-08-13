@@ -32,10 +32,9 @@ class CartRemoveItem extends AbstractCartRoute {
 	public function get_args() {
 		return [
 			[
-				'methods'             => \WP_REST_Server::CREATABLE,
-				'callback'            => [ $this, 'get_response' ],
-				'permission_callback' => '__return_true',
-				'args'                => [
+				'methods'  => \WP_REST_Server::CREATABLE,
+				'callback' => [ $this, 'get_response' ],
+				'args'     => [
 					'key' => [
 						'description' => __( 'Unique identifier (key) for the cart item.', 'woocommerce' ),
 						'type'        => 'string',

@@ -41,10 +41,9 @@ class CartUpdateShipping extends AbstractCartRoute {
 	public function get_args() {
 		return [
 			[
-				'methods'             => \WP_REST_Server::CREATABLE,
-				'callback'            => [ $this, 'get_response' ],
-				'permission_callback' => '__return_true',
-				'args'                => [
+				'methods'  => \WP_REST_Server::CREATABLE,
+				'callback' => [ $this, 'get_response' ],
+				'args'     => [
 					'first_name' => [
 						'description'       => __( 'Customer first name.', 'woocommerce' ),
 						'type'              => 'string',

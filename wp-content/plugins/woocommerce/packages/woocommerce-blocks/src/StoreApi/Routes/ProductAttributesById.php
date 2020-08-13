@@ -37,10 +37,9 @@ class ProductAttributesById extends AbstractRoute {
 				),
 			),
 			[
-				'methods'             => \WP_REST_Server::READABLE,
-				'callback'            => [ $this, 'get_response' ],
-				'permission_callback' => '__return_true',
-				'args'                => array(
+				'methods'  => \WP_REST_Server::READABLE,
+				'callback' => [ $this, 'get_response' ],
+				'args'     => array(
 					'context' => $this->get_context_param(
 						array(
 							'default' => 'view',
