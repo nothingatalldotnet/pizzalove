@@ -144,9 +144,8 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$monday_group = get_field('monday');
+	$monday_group = get_field('monday', 'option');
 	if($monday_group['openclosed']) {
-		print_r($$monday_group['openclosed']);
 		$open  = $monday_group['open'];
 		$closed  = $monday_group['close'];
 	}
@@ -159,7 +158,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$tuesday_group = get_field('tuesday');
+	$tuesday_group = get_field('tuesday', 'option');
 	if($tuesday_group['openclosed']) {
 		$open  = $tuesday_group['open'];
 		$closed  = $tuesday_group['close'];
@@ -173,7 +172,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$wednesday_group = get_field('wednesday');
+	$wednesday_group = get_field('wednesday', 'option');
 	if($wednesday_group['openclosed']) {
 		$open  = $wednesday_group['open'];
 		$closed  = $wednesday_group['close'];
@@ -187,7 +186,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$thursday_group = get_field('thursday');
+	$thursday_group = get_field('thursday', 'option');
 	if($thursday_group['openclosed']) {
 		$open  = $thursday_group['open'];
 		$closed  = $thursday_group['close'];
@@ -201,7 +200,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$friday_group = get_field('friday');
+	$friday_group = get_field('friday', 'option');
 	if($friday_group['openclosed']) {
 		$open  = $friday_group['open'];
 		$closed  = $friday_group['close'];
@@ -215,7 +214,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$saturday_group = get_field('saturday');
+	$saturday_group = get_field('saturday', 'option');
 	if($saturday_group['openclosed']) {
 		$open  = $saturday_group['open'];
 		$closed  = $saturday_group['close'];
@@ -228,7 +227,7 @@
 <?php
 	$open = "Closed";
 	$closed = "Closed";
-	$sunday_group = get_field('sunday');
+	$sunday_group = get_field('sunday', 'option');
 	if($sunday_group['openclosed']) {
 		$open  = $sunday_group['open'];
 		$closed  = $sunday_group['close'];
