@@ -3,6 +3,19 @@
 	* Template Name: Menu page
 	*/
 	get_header();
+
+
+	// First check if we are open and taking orders
+	$is_open = get_field('current_status','option');
+	$is_taking_orders = get_field('accept_online_orders','option');
+	if((!$is_open)&&(!$is_taking_orders)) {
+		echo "closed";
+	} else if(($is_open)&&(!$is_taking_orders)) {
+		echo "open but not taking orders online";
+	} else {
+		echo "fully open";
+	}
+
 	$category_array = array();
 
 	$terms = get_terms( 'product_tag' );
