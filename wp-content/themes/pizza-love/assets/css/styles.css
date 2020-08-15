@@ -569,13 +569,6 @@ header .menu-items a {
 		flex: 25%;
 	}
 
-	@media (min-width: 700px) {
-
-		background-image: url(../images/background.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
 	#drop-filters {
 		display: none;
 	}
@@ -674,6 +667,19 @@ header .menu-items a {
   transform: rotate(45deg);
 }
 
+.menu-page .menu-filters {
+	background-image: url(https://staging.pizza-love.co.uk/wp-content/themes/pizza-love/assets/images/background.svg);
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
+.filters {
+	background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+	opacity: 0.95;
+}
+
 
 
 	@media (max-width: 700px) {
@@ -693,6 +699,10 @@ header .menu-items a {
 			margin: 0;
 			padding: 0;
 			margin-bottom: 10px !important;
+		}
+
+		.menu-content .product h3 {
+			margin: 20px;
 		}
 
 		.menu-content .product > div {
