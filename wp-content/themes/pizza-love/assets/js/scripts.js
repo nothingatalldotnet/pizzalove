@@ -51,6 +51,8 @@ var General = {
 		jQuery('.menu-filters input[type=radio], .filter-list input[type=radio]').on('click', General.filterItems);
 		jQuery('.menu-filters input[type=checkbox], .filter-list input[type=checkbox]').on('click', General.filterItems);
 		jQuery('.filter-title').on('click', General.toggleFilterDropdown);
+		jQuery('.product-more-info').on('click', General.openModal);
+		jQuery('.modal-close').on('click', General.closeModal);
 	},
 
 	toggleFilterDropdown: function(e) {
@@ -97,6 +99,16 @@ var General = {
 			filter_string = "*";
 		}
 		jQuery(".menu-content").isotope({filter:filter_string});
+	},
+
+	openModal: function(e) {
+		var modal = jQuery(e.target).closest('.product').find('.modal')
+
+		modal.show();
+	},
+
+	closeModal: function() {
+		jQuery('.modal').hide();
 	}
 
 

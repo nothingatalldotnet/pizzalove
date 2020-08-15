@@ -93,11 +93,19 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '		<form class="cart" action="'.esc_url(apply_filters("woocommerce_add_to_cart_form_action", $product->get_permalink())).'" method="post" enctype="multipart/form-data">';
 			do_action('woocommerce_before_add_to_cart_button');
 			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button margin single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
-			echo '			<a href="'.$prod_url.'" class="black-button margin" title="'.$prod_name.'">More Info</a>';
+			echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
 			echo '		</form>';
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
+			echo '	<div id="modal" class="modal">';
+
+			echo '		<div class="modal-content">';
+			echo '			<a href="#" class="modal-close"><i class="fas fa-times"></i></a>';
+			echo '			<p>'.$prod_name.'</p>';
+			echo '		</div>';
+			echo '	</div>';
+
 ?>
 <script type="application/ld+json">
 	{
