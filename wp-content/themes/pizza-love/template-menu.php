@@ -71,7 +71,6 @@ for($i=0; $i < count($tag_array); $i++) {
 			$prod_id = get_the_ID();
 			$product = wc_get_product($prod_id);
 			$prod_name = $product->get_name();
-			$prod_addons = WC_Product_Addons_Helper::get_product_addons($prod_id);
 			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
