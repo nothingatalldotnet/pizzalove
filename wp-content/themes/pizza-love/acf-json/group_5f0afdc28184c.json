@@ -338,7 +338,7 @@
                     "key": "field_5f296af9903d9",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -355,14 +355,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296b26903da",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -379,8 +382,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -422,7 +428,7 @@
                     "key": "field_5f296cf799713",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -439,14 +445,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296cf799714",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -463,8 +472,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -506,7 +518,7 @@
                     "key": "field_5f296cff99717",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -523,14 +535,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296cff99718",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -547,8 +562,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -590,7 +608,7 @@
                     "key": "field_5f296d049971b",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -607,14 +625,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296d049971c",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -631,8 +652,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -674,7 +698,7 @@
                     "key": "field_5f296d0c9971f",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -691,14 +715,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296d0c99720",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -715,8 +742,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -758,7 +788,7 @@
                     "key": "field_5f296d1399723",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -775,14 +805,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296d1399724",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -799,8 +832,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -842,7 +878,7 @@
                     "key": "field_5f296d1999727",
                     "label": "Open",
                     "name": "open",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -859,14 +895,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f296d1999728",
                     "label": "Close",
                     "name": "close",
-                    "type": "time_picker",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -883,8 +922,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "",
-                    "return_format": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -941,5 +983,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596558342
+    "modified": 1597496541
 }
