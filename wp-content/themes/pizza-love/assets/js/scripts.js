@@ -107,7 +107,7 @@ var General = {
 		modal.show();
 	},
 
-	closeModal: function() {
+	closeModal: function(e) {
 		e.preventDefault();
 		jQuery('.modal').hide();
 	}
