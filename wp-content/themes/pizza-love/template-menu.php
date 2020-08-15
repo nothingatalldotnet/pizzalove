@@ -52,6 +52,10 @@ for($i=0; $i < count($tag_array); $i++) {
 <?php
 	if((!$is_open)&&(!$is_taking_orders)) {
 		echo '<h4>Sorry, we are not open at the moment, please see our <a href="'.site_url().'/#opening-times" title="Opening Times">Opening Times</a></h4>';
+	} else if(($is_open)&&(!$is_taking_orders)) {
+		echo '<h4>Sorry, we are not taking online orders at the moment, please give us a call on <a href="tel:'.get_field('contact_phone', 'option').'" title="Order by phone">'.get_field('contact_phone', 'option'),'</a></h4>';
+	} else {
+		// open
 	}
 ?>
 		<div class="menu-page padded">
