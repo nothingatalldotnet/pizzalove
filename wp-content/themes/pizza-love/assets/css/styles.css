@@ -569,6 +569,13 @@ header .menu-items a {
 		flex: 25%;
 	}
 
+	@media (min-width: 700px) {
+
+		background-image: url(../images/background.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 	#drop-filters {
 		display: none;
 	}
