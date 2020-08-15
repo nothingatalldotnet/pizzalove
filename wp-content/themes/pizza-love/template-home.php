@@ -146,6 +146,7 @@
 	$closed = "Closed";
 	$monday_group = get_field('monday');
 	if($monday_group['openclosed']) {
+		print_r($$monday_group['openclosed']);
 		$open  = $monday_group['open'];
 		$closed  = $monday_group['close'];
 	}
