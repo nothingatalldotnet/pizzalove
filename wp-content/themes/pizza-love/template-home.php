@@ -4,6 +4,9 @@
 	*/
 	get_header();
 
+	$is_open = get_field('current_status','option');
+	$is_taking_orders = get_field('accept_online_orders','option');
+
 	if(have_posts()) {
 		while(have_posts()) {
 			the_post(); 
@@ -60,6 +63,7 @@
 			$this_pizza_short_text = get_sub_field('short_text');
 			$this_pizza = wc_get_product($this_pizza_id);
 			$this_pizza_title = $this_pizza->get_name();
+			$this_pizza_url = $this_pizza->get_permalink();
 			$this_pizza_add_to_cart = site_url()."/basket?add-to-cart=".$this_pizza_id;
 ?>
 				<article>
@@ -67,7 +71,13 @@
 					<div>
 						<h3><?php echo $this_pizza_title; ?></h3>
 						<p><?php echo $this_pizza_short_text; ?></p>
-						<a href="<?php echo $this_pizza_add_to_cart; ?>" class="red-button">Buy Now</a>
+<?php
+			if((!$is_open)&&(!$is_taking_orders)) {
+				echo '<a href="'.$this_pizza_url.'" class="black-button">More Info</a>';
+			} else {
+				echo '<a href="'.$this_pizza_add_to_cart.'" class="red-button">Buy Now</a>';
+			}
+?>
 					</div>
 				</article>
 <?php
