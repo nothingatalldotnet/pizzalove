@@ -17,7 +17,40 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_cart' ); ?>
+
+	$is_open = get_field('current_status','option');
+	$is_taking_orders = get_field('accept_online_orders','option');
+	if((!$is_open)&&(!$is_taking_orders)) {
+?>
+	<div class="content">
+		<div class="block-cta">
+			<img src="<?php echo site_url(); ?>/wp-content/themes/pizza-love/assets/images/pizza.png">
+			<div>
+				<h2 class="title">Closed!</h2>
+				<p>Sorry, we are not open at the moment</p><br><br>
+				<a href="'.site_url().'/#opening-times" class="red-button" title="Opening Times">Opening Times</a>
+			</div>
+		</div>
+	</div>
+<?php
+
+	} else if(($is_open)&&(!$is_taking_orders)) {
+?>
+	<div class="content">
+		<div class="block-cta">
+			<img src="<?php echo site_url(); ?>/wp-content/themes/pizza-love/assets/images/pizza.png">
+			<div>
+				<h2 class="title">We are open!</h2>
+				<p>Sorry, we are not taking online orders at the moment, you can call us though!</p><br><br>
+				<a href="tel:'.get_field('contact_phone', 'option').'" class="red-button" title="Order by phone">Call Us</a>
+			</div>
+		</div>
+	</div>
+<?php
+	} else {
+
+	do_action( 'woocommerce_before_cart' );
+?>
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
@@ -174,3 +207,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+<?php
+	}
+?>

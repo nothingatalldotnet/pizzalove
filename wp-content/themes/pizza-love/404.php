@@ -10,7 +10,7 @@
 				<a href="<?php echo site_url(); ?>" class="red-button">PIZZA ME!</a>
 			</div>
 		</div>
+	</div>
 <?php
-	echo '	</div>';
 	echo '</div>';
 	get_footer();

@@ -131,6 +131,7 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '		<div class="modal-content">';
 			echo '			<a href="#" class="modal-close"><i class="fas fa-times"></i></a>';
 			echo '			<p>'.$prod_name.'</p>';
+			echo 			do_shortcode('[products ids='.$prod_id.']');
 			echo '		</div>';
 			echo '	</div>';
 
