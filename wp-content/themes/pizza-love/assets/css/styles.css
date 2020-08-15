@@ -26,7 +26,7 @@ h2 .c, h3 .red {
 }
 
 .closed {
-	text-anchor: center;
+	text-align: center;
 }
 
 ul {
