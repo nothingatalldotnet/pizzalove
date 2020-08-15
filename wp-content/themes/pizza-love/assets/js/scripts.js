@@ -102,12 +102,13 @@ var General = {
 	},
 
 	openModal: function(e) {
+		e.preventDefault();
 		var modal = jQuery(e.target).closest('.product').find('.modal')
-
 		modal.show();
 	},
 
 	closeModal: function() {
+		e.preventDefault();
 		jQuery('.modal').hide();
 	}
 
