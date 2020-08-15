@@ -123,7 +123,7 @@ for($i=0; $i < count($tag_array); $i++) {
 				echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
 				echo '		</form>';
 			}
-			echo '		<img src="'.$prod_image.'">';
+//			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
 			echo '	<div id="modal" class="modal">';
