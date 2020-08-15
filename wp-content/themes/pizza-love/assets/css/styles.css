@@ -21,10 +21,13 @@ h2, h3 {
 	color: #000;
 }
 
-h2 .red, h3 .red {
+h2 .c, h3 .red {
 	color: #ED1C24;
 }
 
+.closed {
+	text-anchor: center;
+}
 
 ul {
 	padding: 0;

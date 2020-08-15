@@ -137,7 +137,7 @@
 		}
 ?>					</ul>
 
-					<h3><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h3>
+					<h3 id="opening-times"><?php echo $opening_title_black; ?>  <span class="red"><?php echo $opening_title_red; ?></span></h3>
 					<table>
 						<tr>
 							<td>Monday</td>

@@ -5,16 +5,14 @@
 	get_header();
 
 
-	// First check if we are open and taking orders
 	$is_open = get_field('current_status','option');
 	$is_taking_orders = get_field('accept_online_orders','option');
-	if((!$is_open)&&(!$is_taking_orders)) {
-		echo "closed";
-	} else if(($is_open)&&(!$is_taking_orders)) {
-		echo "open but not taking orders online";
-	} else {
-		echo "fully open";
-	}
+//	if((!$is_open)&&(!$is_taking_orders)) {
+//		echo "closed";
+//	} else if(($is_open)&&(!$is_taking_orders)) {
+//		echo "open but not taking orders online";
+//	}
+
 
 	$category_array = array();
 
@@ -50,6 +48,12 @@ for($i=0; $i < count($tag_array); $i++) {
 				</ul>
 			</div>
 		</div>
+
+<?php
+	if((!$is_open)&&(!$is_taking_orders)) {
+		echo '<h4>Sorry, we are not open at the moment, please see our <a href="'.site_url().'/#opening-times" title="Opening Times">Opening Times</a></h4>';
+	}
+?>
 		<div class="menu-page padded">
 			<div class="menu-content">
 <?php
@@ -103,11 +107,18 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
 			echo '	<h3>'.$prod_name.' '.$product->get_price_html().'</h3>';
 			echo '	<div class="product-information">';
-			echo '		<form class="cart" action="'.esc_url(apply_filters("woocommerce_add_to_cart_form_action", $product->get_permalink())).'" method="post" enctype="multipart/form-data">';
-			do_action('woocommerce_before_add_to_cart_button');
-			echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button margin single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
-			echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
-			echo '		</form>';
+
+			if(($is_open)&&($is_taking_orders)) {
+				echo '		<form class="cart" action="'.esc_url(apply_filters("woocommerce_add_to_cart_form_action", $product->get_permalink())).'" method="post" enctype="multipart/form-data">';
+				do_action('woocommerce_before_add_to_cart_button');
+				echo '			<button type="submit" name="add-to-cart" value="'.esc_attr($product->get_id()).'" class="red-button margin single_add_to_cart_button button alt">'.esc_html( $product->single_add_to_cart_text() ).'</button>';
+				echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
+				echo '		</form>';
+			} else {
+				echo '		<form class="cart">';
+				echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
+				echo '		</form>';
+			}
 			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
