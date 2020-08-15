@@ -21,7 +21,7 @@ h2, h3 {
 	color: #000;
 }
 
-h2 .c, h3 .red {
+h2 .red, h3 .red {
 	color: #ED1C24;
 }
 
