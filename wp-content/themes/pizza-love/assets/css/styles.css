@@ -795,6 +795,15 @@ header .menu-items a {
 	}
 
 /***************************
+* PRODUCT
+***************************/
+.product_meta,
+.tabs,
+.woocommerce-product-gallery {
+	display: none;
+}
+
+/***************************
 * PRODUCT MODAL
 ***************************/
 .modal {
