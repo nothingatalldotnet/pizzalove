@@ -46,7 +46,9 @@ a:hover {
 	color: #ED1C24;
 }
 
-.red-button {
+.red-button,
+#place_order,
+.checkout_coupon button {
 	background-color:#ed1c23 !important;
 	display: inline-block  !important;
 	cursor: pointer  !important;
@@ -57,13 +59,16 @@ a:hover {
 	text-decoration: none  !important;
 	border-radius: 0  !important;
 	min-width: 150px;
+	text-align: center;
 }
 
 .red-button.margin {
 	margin-top: 10px;
 }
 
-.red-button:hover {
+.red-button:hover,
+#place_order,
+.checkout_coupon button {
 	background-color:#ed1c23  !important;
 }
 
@@ -78,6 +83,7 @@ a:hover {
 	text-decoration: none  !important;
 	border-radius: 0  !important;
 	min-width: 88px;
+	text-align: center;
 }
 
 .black-button.margin {
