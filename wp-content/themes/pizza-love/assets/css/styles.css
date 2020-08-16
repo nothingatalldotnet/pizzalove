@@ -545,6 +545,7 @@ header .menu-items a {
 
 		.menu-content .product .price.slash .woocommerce-Price-amount {
 			text-decoration: line-through;
+			color: #000
 		}
 
 		.menu-content .product .sale .woocommerce-Price-amount {
