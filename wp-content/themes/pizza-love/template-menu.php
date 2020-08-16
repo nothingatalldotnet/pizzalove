@@ -95,7 +95,8 @@ for($i=0; $i < count($tag_array); $i++) {
 			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
-			$prod_price = $product->get_price_html();
+			$prod_price = wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price())));
+			$prod_price_sale = wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price())));
 			$prod_sku = $product->get_sku();
 			$prod_price_simple = $product->get_price();
 
@@ -109,7 +110,13 @@ for($i=0; $i < count($tag_array); $i++) {
 				}
 			}
 			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
-			echo '	<h3>'.$prod_name.' '.$product->get_price_html().'</h3>';
+			echo '	<h3>'.$prod_name.'</h3>';
+			if($prod_price_sale != $prod_price) {
+				echo '<span class="price slash">'.$prod_price.'</span>';
+				echo '<span class="sale">'.$prod_price_sale.'</span>';
+			} else {
+ 			echo '	<span class="price">'.$prod_price.'</span>';
+			}
 			echo '	<div class="product-information">';
 
 			if(($is_open)&&($is_taking_orders)) {

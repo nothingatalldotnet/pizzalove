@@ -12,3 +12,13 @@
 	add_action('after_theme_setup', 'woo_declare_support');
 
 	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	  
+	function show_sale_on_basket( $price, $values, $cart_item_key ) {
+		$slashed_price = $values['data']->get_price_html();
+		$is_on_sale = $values['data']->is_on_sale();
+		if ( $is_on_sale ) {
+			$price = $slashed_price;
+		}
+		return $price;
+	}
+	add_filter('woocommerce_cart_item_price', 'show_sale_on_basket', 30, 3);
