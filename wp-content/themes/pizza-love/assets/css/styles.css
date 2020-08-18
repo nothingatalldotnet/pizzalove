@@ -855,6 +855,7 @@ header .menu-items a {
 		.modal-content .product .qty {
 			border: solid 1px !important;
 			border-radius: 0px !important;
+			padding: 13px !important;
 		}
 
 		.modal-content .product .qty:focus {
