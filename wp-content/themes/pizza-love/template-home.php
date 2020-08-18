@@ -121,10 +121,10 @@
 					<ul>
 <?php
 		if(get_field('contact_email', 'option') != "") {
-			echo '<li><i class="fas fa-envelope"></i><span>'.get_field("contact_email", "option").'</span></li>';
+			echo '<li><i class="fas fa-envelope"></i><span><a href="email:'.get_field("contact_email", "option").'" title="Order by email">'.get_field("contact_email", "option").'</a></span></li>';
 		}
 		if(get_field('contact_phone', 'option') != "") {
-			echo '<li><i class="fas fa-phone"></i><span>'.get_field("contact_phone", "option").'</span></li>';
+			echo '<li><i class="fas fa-phone"></i><span><a href="tel:'.get_field("contact_phone", "option").'" title="Order by phone">'.get_field("contact_phone", "option").'</a></span></li>';
 		}
 		if(get_field('contact_address_1', 'option') != "") {
 			echo '<li><i class="fas fa-store"></i><span>'.get_field("contact_address_1", "option");
