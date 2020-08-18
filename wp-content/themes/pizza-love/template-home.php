@@ -65,7 +65,7 @@
 			$this_pizza_title = $this_pizza->get_name();
 			$this_pizza_url = $this_pizza->get_permalink();
 			$this_pizza_add_to_cart = site_url()."/basket?add-to-cart=".$this_pizza_id;
-			$this_pizza_image = wp_get_attachment_url($product->get_image_id());
+			$this_pizza_image = wp_get_attachment_url($this_pizza_id);
 ?>
 				<article>
 					<img src="/wp-content/themes/pizza-love/assets/images/pizza.png">
