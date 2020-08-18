@@ -723,7 +723,11 @@ header .menu-items a {
 		}
 
 		.menu-content .product h3 {
-			/* margin: 20px; */
+			margin: 20px;
+		}
+
+		.menu-content .product .price {
+			margin-left: 20px;
 		}
 
 		.menu-content .product > div {
