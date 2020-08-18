@@ -65,11 +65,9 @@
 			$this_pizza_title = $this_pizza->get_name();
 			$this_pizza_url = $this_pizza->get_permalink();
 			$this_pizza_add_to_cart = site_url()."/basket?add-to-cart=".$this_pizza_id;
-			$this_pizza_image = $this_pizza->get_image();
-
 ?>
 				<article>
-					<img src="<?php echo $this_pizza_image; ?>">
+					<img src="<?php $this_pizza->get_image(); ?>">
 					<div>
 						<h3><?php echo $this_pizza_title; ?></h3>
 						<p><?php echo $this_pizza_short_text; ?></p>
