@@ -71,11 +71,11 @@ var General = {
 		} else {
 			category = jQuery(".menu-filters input[type=radio]:checked").val();
 		}
-console.log(category);
+
 		if(typeof category == 'undefined') {
 			category = "all";
 		}
-console.log(category);
+
 		if(jQuery(window).width() <= 700) {
 			jQuery('.filter-list input[type=checkbox]:checked').each(function() {
 				if(category !== "") {
@@ -93,8 +93,6 @@ console.log(category);
 				}
 			});
 		}
-
-console.log(category);
 
 		filter_string = filter_string.replace(/,\s*$/, "");
 
