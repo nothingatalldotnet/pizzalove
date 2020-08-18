@@ -442,6 +442,10 @@ header .menu-items a {
 			border: 1px solid #ed1c23;
 		}
 
+		.block-popular article:not(:last-child) {
+			margin-left: 10px;
+		}
+
 			.block-popular article img {
 				width: 80%;
 			    margin: auto;
