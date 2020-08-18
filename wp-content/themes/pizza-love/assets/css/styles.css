@@ -800,6 +800,12 @@ header .menu-items a {
 		.glyphicon {top: -2px;}
 	}
 
+	@media (max-width: 1000px) {
+		.menu-content .product {
+			width: 90%;
+		}
+	}
+
 /***************************
 * PRODUCT
 ***************************/
