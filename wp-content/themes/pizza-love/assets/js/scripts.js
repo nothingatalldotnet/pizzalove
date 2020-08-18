@@ -71,8 +71,8 @@ var General = {
 		} else {
 			category = jQuery(".menu-filters input[type=radio]:checked").val();
 		}
-console.log(category);
-		if(category == undefined) {
+
+		if(typeof category == 'undefined') {
 			category = "all";
 		}
 
