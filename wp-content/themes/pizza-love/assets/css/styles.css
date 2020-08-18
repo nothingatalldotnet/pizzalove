@@ -517,6 +517,10 @@ header .menu-items a {
 		.block-map div.right table {
 			width: 100%;
 		}
+
+		.block-map ul li {
+			font-size: 18px;
+		}
 	}
 
 /***************************
