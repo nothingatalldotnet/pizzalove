@@ -705,6 +705,11 @@ header .menu-items a {
 	opacity: 0.95;
 }
 
+	@media (max-width: 1000px) {
+		.menu-content .product {
+			width: 90%;
+		}
+	}
 
 
 	@media (max-width: 700px) {
@@ -802,12 +807,6 @@ header .menu-items a {
 		.glyphicon-chevron-down-custom .sp-1, .glyphicon-chevron-up-custom .sp-2 {transform: skewY(-40deg);}
 		.glyphicon-chevron-up-custom .sp-1, .glyphicon-chevron-down-custom .sp-2 {transform: skewY(40deg);}
 		.glyphicon {top: -2px;}
-	}
-
-	@media (max-width: 1000px) {
-		.menu-content .product {
-			width: 90%;
-		}
 	}
 
 /***************************
