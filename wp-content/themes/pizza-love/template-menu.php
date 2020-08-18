@@ -58,6 +58,9 @@ for($i=0; $i < count($tag_array); $i++) {
 		// open
 	}
 ?>
+		<div class="padded">
+			<h1>Menu</h1>
+		</div>
 		<div class="menu-page padded">
 			<div class="menu-content">
 <?php
