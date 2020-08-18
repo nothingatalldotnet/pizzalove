@@ -445,6 +445,7 @@ header .menu-items a {
 			.block-popular article img {
 				width: 80%;
 			    margin: auto;
+			    padding-top: 15px;
 			}
 
 			.block-popular article div {
