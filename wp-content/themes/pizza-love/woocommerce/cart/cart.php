@@ -184,7 +184,7 @@ defined( 'ABSPATH' ) || exit;
 				</td>
 			</tr>
 			<tr>
-				<td colspan="6">
+				<td colspan="6" class="actions">
 					<a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>"> <?php _e( 'Continue shopping', 'woocommerce' ) ?> </a>
 				</td>
 			</tr>
