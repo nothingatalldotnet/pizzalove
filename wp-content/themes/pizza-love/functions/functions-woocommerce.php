@@ -22,3 +22,12 @@
 		return $price;
 	}
 	add_filter('woocommerce_cart_item_price', 'show_sale_on_basket', 30, 3);
+
+
+
+
+
+	function shipping_notes() {
+		echo "here is notes";
+	}
+	add_action('woocommerce_proceed_to_checkout', 'shipping_notes', 20 );
