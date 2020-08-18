@@ -723,11 +723,11 @@ header .menu-items a {
 		}
 
 		.menu-content .product h3 {
-			margin: 20px;
+			/* margin: 20px; */
 		}
 
 		.menu-content .product > div {
-		    padding: 10px;
+		    padding: 20px;
 		}
 
 		.menu-page .menu-filters .filters {
