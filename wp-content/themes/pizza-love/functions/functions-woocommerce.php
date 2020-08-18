@@ -26,7 +26,7 @@
 
 	function shipping_notes() {
 		echo "<h2>Important!</h2>";
-		echo "Deliveries are dispatched once per hour on the hour.<br>";
-		echo "Pick up in shop, please allow 60 minutes before picking up your pizza.";
+		echo "Deliveries are dispatched once per hour on the hour.<br><br>";
+		echo "If you are picking up in the shop, please allow 60 minutes before picking up your pizza.";
 	}
-	add_action('woocommerce_before_cart_totals', 'shipping_notes', 20 );
+	add_action('woocommerce_before_cart_totals', 'shipping_notes', 20);
