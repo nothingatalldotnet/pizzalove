@@ -24,10 +24,9 @@
 	add_filter('woocommerce_cart_item_price', 'show_sale_on_basket', 30, 3);
 
 
-
-
-
 	function shipping_notes() {
-		echo "here is notes";
+		echo "<h2>Important!</h2>"
+		echo "Deliveries are dispatched once per hour on the hour.<br>";
+		echo "Pick up in shop, please allow 60 minutes before picking up your pizza.";
 	}
 	add_action('woocommerce_before_cart_totals', 'shipping_notes', 20 );
