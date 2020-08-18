@@ -94,7 +94,7 @@
 				</div>
 			</nav>
 			<div id="mobile-logo">
-				<a class="logo" href="#">
+				<a class="logo" href="<?php echo site_url(); ?>">
 					<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.svg'; ?>" class="site-logo" alt="PizzaLove Logo">
 				</a>
 			</div>
