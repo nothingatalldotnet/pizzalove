@@ -894,6 +894,11 @@ header .menu-items a {
 /***************************
 * BASKET STYLES
 ***************************/
+	.basket-wrapper .padded {
+		padding-top: 10px;
+	}
+
+
 	.woocommerce table.shop_table {
 		border: 0;
 		border-radius: 0;
