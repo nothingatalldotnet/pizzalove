@@ -67,8 +67,6 @@
 			$this_pizza_add_to_cart = site_url()."/basket?add-to-cart=".$this_pizza_id;
  			$this_pizza_meta = get_post_meta($this_pizza_id);
     		$this_pizza_image = wp_get_attachment_image_url($this_pizza_meta['_thumbnail_id'][0], 'featured-pizza');
-print_r($this_pizza_meta);
-
 ?>
 				<article>
 					<img src="<?php echo $this_pizza_image; ?>">
