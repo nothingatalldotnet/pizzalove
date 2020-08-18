@@ -30,4 +30,4 @@
 	function shipping_notes() {
 		echo "here is notes";
 	}
-	add_action('woocommerce_proceed_to_checkout', 'shipping_notes', 20 );
+	add_action('woocommerce_before_cart_totals', 'shipping_notes', 20 );
