@@ -11,6 +11,7 @@ var General = {
 
 	initIsotope: function() {
 		jQuery('.all').prop("checked",true);
+		jQueyy('.all').closest('label').find('.all').show();
 
         jQuery(".menu-content").isotope({
             layoutMode: 'fitRows',
@@ -111,8 +112,6 @@ var General = {
 		e.preventDefault();
 		jQuery('.modal').hide();
 	}
-
-
 };
 
 jQuery(function(){
