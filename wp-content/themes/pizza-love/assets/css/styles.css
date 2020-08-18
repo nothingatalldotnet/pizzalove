@@ -895,7 +895,7 @@ header .menu-items a {
 * BASKET STYLES
 ***************************/
 	.basket-wrapper .padded {
-		padding-top: 10px;
+		padding-top: 10px !important;
 	}
 
 
