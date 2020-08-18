@@ -71,6 +71,10 @@ var General = {
 		} else {
 			category = jQuery(".menu-filters input[type=radio]:checked").val();
 		}
+console.log(category);
+		if(category === "undefined") {
+			category = "all";
+		}
 
 		if(jQuery(window).width() <= 700) {
 			jQuery('.filter-list input[type=checkbox]:checked').each(function() {
@@ -89,8 +93,6 @@ var General = {
 				}
 			});
 		}
-
-		console.log(filter_string);
 
 		filter_string = filter_string.replace(/,\s*$/, "");
 
