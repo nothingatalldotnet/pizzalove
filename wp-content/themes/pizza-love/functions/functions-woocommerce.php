@@ -25,7 +25,7 @@
 
 
 	function shipping_notes() {
-		echo "<h2>Important!</h2>"
+		echo "<h2>Important!</h2>";
 		echo "Deliveries are dispatched once per hour on the hour.<br>";
 		echo "Pick up in shop, please allow 60 minutes before picking up your pizza.";
 	}
