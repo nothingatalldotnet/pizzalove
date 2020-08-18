@@ -947,6 +947,11 @@ header .menu-items a {
 /***************************
 * CHECKOUT STYLES
 ***************************/
+
+.woocommerce-cart-form__cart-item .cart_item {
+	border-top: 1px solid #ED1C24;
+}
+
 .checkout_coupon .woocommerce-form-coupon {
 	border: 1px solid #ED1C24 !important;
 	border-radius: 0 !important;
