@@ -1005,10 +1005,32 @@ footer {
 	}
 
 	footer .footer-cred {
+		display: flex;
+		flex-direction: column;
 		color: #fff;
 		font-size: 12px;
 	}
 
+	footer .footer-cred ul {
+		color: #fff;
+		font-size: 16px;
+	}
+
+	footer .footer-cred ul li {
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	footer .footer-cred ul li a:hover {
+		color: #ed1c23;
+	}
+
 	footer .footer-cred a {
 		text-decoration: none;
+	}
+
+	footer .footer-cred .cred {
+		text-align: right;
+		margin-right: 10px;
 	}
