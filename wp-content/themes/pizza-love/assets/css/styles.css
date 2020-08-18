@@ -949,6 +949,28 @@ header .menu-items a {
 	border-radius: 0 !important;
 }
 
+.wc-backward {
+	appearance: button;
+	-webkit-writing-mode: horizontal-tb !important;
+	text-rendering: auto;
+	color: #ffffff  !important;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: center;
+	align-items: flex-start;
+	cursor: default;
+	background-color:#ed1c23 !important;
+	box-sizing: border-box;
+	margin: 0em;
+	padding: 1px 6px;
+	border-radius: 0  !important;
+	padding: 16px 31px  !important;
+}
+
 /***************************
 * MCE STYLES
 ***************************/
