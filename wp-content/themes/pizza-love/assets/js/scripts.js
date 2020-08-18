@@ -90,6 +90,8 @@ var General = {
 			});
 		}
 
+		console.log(filter_string);
+
 		filter_string = filter_string.replace(/,\s*$/, "");
 
 		if((filter_string === "")&&(category !== "")) {
