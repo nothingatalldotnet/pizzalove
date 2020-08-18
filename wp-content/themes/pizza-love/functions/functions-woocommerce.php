@@ -24,10 +24,21 @@
 	add_filter('woocommerce_cart_item_price', 'show_sale_on_basket', 30, 3);
 
 
-	function shipping_notes() {
+	function cart_notes() {
 		echo "<h2>Important!</h2>";
 		echo "Deliveries are dispatched once per hour on the hour.<br><br>";
 		echo "If you are picking up in the shop, please allow 60 minutes before picking up your pizza.<br><br>";
 		echo "If you have any dietry concerns or any specific delivery/pick up details, please leave this information in the notes section on checkout.";
 	}
-	add_action('woocommerce_before_cart_totals', 'shipping_notes', 20);
+	add_action('woocommerce_before_cart_totals', 'cart_notes', 20);
+
+
+	function order_notes() {
+		echo "<h2>Important!</h2>";
+		echo "Deliveries are dispatched once per hour on the hour.<br><br>";
+		echo "If you are picking up in the shop, please allow 60 minutes before picking up your pizza.<br><br>";
+		echo "If you have any dietry concerns or any specific delivery/pick up details, please leave this information in the notes section above.";
+	}
+	add_action('woocommerce_checkout_before_order_review', 'order_notes', 20);
+
+
