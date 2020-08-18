@@ -440,7 +440,7 @@ header .menu-items a {
 
 		.block-popular article {
 			border: 1px solid #ed1c23;
-			margin-left: 10px;
+			margin-right: 10px;
 		}
 
 		.block-popular article:last-of-type {
