@@ -40,3 +40,18 @@
 		echo "If you have any dietry concerns or any specific delivery/pick up details, please leave this information in the notes section above.";
 	}
 	add_action('woocommerce_checkout_before_order_review', 'order_notes', 20);
+
+	function add_basket_count_to_nav($items) {
+
+		if((!(is_checkout()))&&(!(is_cart()))) {
+			$basket_count = '<li class="menu-item">';
+			$basket_count .= sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count());
+			$basket_count .= ' - '.WC()->cart->get_cart_total();
+			$basket_count .= '</li>';
+			
+			$items = $items . $basket_count;
+		}
+		return $items;
+	}
+	add_filter('wp_nav_menu_main-menu_items', 'add_basket_count_to_nav');
+	add_filter('wp_nav_menu_main-menu-mobile_items', 'add_basket_count_to_nav');
