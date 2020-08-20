@@ -58,11 +58,9 @@
 		<header>
 			<nav class="fixed-nav-bar">
 				<div id="menu" class="menu">
-					<h1>
-						<a class="logo" href="<?php echo site_url(); ?>" title="PizzaLove Home">
-							<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.svg'; ?>" class="site-logo" alt="PizzaLove Logo">
-						</a>
-					</h1>
+					<a class="logo" href="<?php echo site_url(); ?>" title="PizzaLove Home">
+						<img src="<?php echo get_stylesheet_directory_uri().'/assets/images/logo.svg'; ?>" class="site-logo" alt="PizzaLove Logo">
+					</a>
 					<div class="menus">
 						<ul class="social menu-items">
 							<li class="phone"><a href="tel:<?php echo get_field('contact_phone', 'option'); ?>" title="Order by phone"><?php echo get_field('contact_phone', 'option'); ?></a></li>

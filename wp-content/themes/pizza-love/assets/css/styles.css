@@ -13,15 +13,15 @@ body {
 }
 
 h1 {
-	display: inline !important;
+/*	display: inline !important; */
 }
 
-h2, h3 {
+h1, h2, h3 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
 }
 
-h2 .red, h3 .red {
+h1 .red, h2 .red, h3 .red {
 	color: #ED1C24;
 }
 
@@ -406,7 +406,7 @@ header .menu-items a {
 			flex: 66%;
 		}
 
-		.block-cta div h2 {
+		.block-cta div h1 {
 			font-size:40px;
 			padding: 10px 0 10px 40px;
 			background: #fff;
