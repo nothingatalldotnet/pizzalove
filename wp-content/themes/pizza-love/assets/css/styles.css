@@ -632,7 +632,7 @@ header .menu-items a {
 
 .menu-page .menu-filters label,
 .filter-list label,
-..woocommerce-form__label-for-checkbox label {
+.woocommerce-form__label-for-checkbox label {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -647,7 +647,7 @@ header .menu-items a {
 
 .menu-page .menu-filters label input,
 .filter-list label input,
-..woocommerce-form__label-for-checkbox label input {
+.woocommerce-form__label-for-checkbox label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -688,7 +688,7 @@ header .menu-items a {
 
 .menu-page .menu-filters label input:checked ~ .radiomark,
 .filter-list label input:checked ~ .radiomark,
-..woocommerce-form__label-for-checkbox label input:checked ~ .radiomark {
+.woocommerce-form__label-for-checkbox label input:checked ~ .radiomark {
   background-color: #eee;
 }
 
