@@ -631,7 +631,8 @@ header .menu-items a {
 	}
 
 .menu-page .menu-filters label,
-.filter-list label {
+.filter-list label,
+#ship-to-different-address .woocommerce-form__label-for-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -645,7 +646,8 @@ header .menu-items a {
 }
 
 .menu-page .menu-filters label input,
-.filter-list label input {
+.filter-list label input,
+.woocommerce-form__input-checkbox {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -677,13 +679,16 @@ header .menu-items a {
 .menu-page .menu-filters label:hover input ~ .radiomark,
 .menu-page .menu-filters label:hover input ~ .checkmark,
 .filter-list label:hover input ~ .radiomark,
-.filter-list label:hover input ~ .checkmark {
+.filter-list label:hover input ~ .checkmark,
+.woocommerce-form__input-checkbox ~ .checkmark,
+.woocommerce-form__input-checkbox ~ .radiomark {
   background-color: #ccc;
 }
 
 
 .menu-page .menu-filters label input:checked ~ .radiomark,
-.filter-list label input:checked ~ .radiomark {
+.filter-list label input:checked ~ .radiomark,
+.woocommerce-form__input-checkbox:checked ~ .radiomark {
   background-color: #eee;
 }
 
@@ -697,7 +702,8 @@ header .menu-items a {
 .menu-page .menu-filters label input:checked ~ .radiomark:after,
 .menu-page .menu-filters label input:checked ~ .checkmark:after,
 .filter-list label input:checked ~ .radiomark:after,
-.filter-list label input:checked ~ .checkmark:after {
+.filter-list label input:checked ~ .checkmark:after,
+.woocommerce-form__input-checkbox:checked ~ .checkmark:after,
   display: block;
 }
 
@@ -712,7 +718,8 @@ header .menu-items a {
 }
 
 .menu-page .menu-filters label .checkmark:after,
-.filter-list label .checkmark:after {
+.filter-list label .checkmark:after,
+.woocommerce-form__input-checkbox:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -984,7 +991,6 @@ header .menu-items a {
 /***************************
 * CHECKOUT STYLES
 ***************************/
-
 .woocommerce table.shop_table_responsive tr, .woocommerce-page table.shop_table_responsive tr {
 	border-bottom: 1px solid #ED1C24;
 }
