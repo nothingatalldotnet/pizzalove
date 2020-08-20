@@ -136,8 +136,7 @@ for($i=0; $i < count($tag_array); $i++) {
 //			echo '		<img src="'.$prod_image.'">';
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
-			echo '	<div id="modal" class="modal">';
-
+			echo '	<div class="modal">';
 			echo '		<div class="modal-content">';
 			echo '			<a href="#" class="modal-close"><i class="fas fa-times"></i></a>';
 			echo 			do_shortcode('[product_page id='.$prod_id.']');

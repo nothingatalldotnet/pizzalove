@@ -787,7 +787,7 @@ header .menu-items a {
 			margin-left: 20px;
 		}
 
-		.menu-content .product > div {
+		.menu-content .product > div:not(.modal) {
 		    padding: 20px;
 		}
 
