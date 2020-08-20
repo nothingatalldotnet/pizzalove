@@ -54,4 +54,3 @@
 		return $items;
 	}
 	add_filter('wp_nav_menu_main-menu_items', 'add_basket_count_to_nav');
-	add_filter('wp_nav_menu_main-menu-mobile_items', 'add_basket_count_to_nav');
