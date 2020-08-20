@@ -5,7 +5,7 @@
 		<div class="block-cta">
 			<img src="<?php echo site_url(); ?>/wp-content/themes/pizza-love/assets/images/pizza.png">
 			<div>
-				<h2 class="title">404!</h2>
+				<h1 class="title">404!</h1>
 				<p><?php echo get_field('404_text','option'); ?></p><br><br>
 				<a href="<?php echo site_url(); ?>" class="red-button">PIZZA ME!</a>
 			</div>
