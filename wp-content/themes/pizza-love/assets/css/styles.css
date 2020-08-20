@@ -675,7 +675,7 @@ header .menu-items a {
   background-color: #eee;
 }
 
-#terms .checkmark {
+#payment > div > div.woocommerce-terms-and-conditions-wrapper > p > label > span.checkmark {
 	background-color: #fff;	
 }
 
