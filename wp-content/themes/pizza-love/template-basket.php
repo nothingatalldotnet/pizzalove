@@ -6,7 +6,7 @@
 ?>
 	<div class="content">
 		<div class="basket-wrapper padded">
-		<h1>Basket</h1>
+		<h1>Your <span class="red">Basket</span></h1>
 <?php
 	echo do_shortcode('[woocommerce_cart]');
 	echo '	</div>';

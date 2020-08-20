@@ -59,7 +59,7 @@ for($i=0; $i < count($tag_array); $i++) {
 	}
 ?>
 		<div class="padded">
-			<h1>Menu</h1>
+			<h1>Pizza Love <span class="red">Menu</span></h1>
 		</div>
 		<div class="menu-page padded">
 			<div class="menu-content">
