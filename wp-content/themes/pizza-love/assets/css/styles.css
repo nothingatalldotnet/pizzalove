@@ -675,6 +675,10 @@ header .menu-items a {
   background-color: #eee;
 }
 
+#terms .checkmark {
+	background-color: #fff;	
+}
+
 
 .menu-page .menu-filters label:hover input ~ .radiomark,
 .menu-page .menu-filters label:hover input ~ .checkmark,
