@@ -232,3 +232,13 @@
 <?php
 	}
 	add_action('login_enqueue_scripts', 'loginLogo');
+
+
+	/**
+	* Remove Yoast shit
+	*/
+	if (defined('WPSEO_VERSION')) {
+		add_action('wp_head',function() { ob_start(function($o) {
+			return preg_replace('/^\n?<!--.*?[Y]oast.*?-->\n?$/mi','',$o);
+		}); },~PHP_INT_MAX);
+	}
