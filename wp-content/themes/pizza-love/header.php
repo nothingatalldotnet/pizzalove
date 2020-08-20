@@ -45,7 +45,7 @@
 					"longitude": "-2.0095687"
 				},
 				"url":"https://pizza-love.co.uk",
-				"telephone": "",
+				"telephone": "<?php echo get_field('contact_phone', 'option'); ?>",
 				"servesCuisine": "Pizza",
 				"priceRange": "$",
 				"menu": "https://pizza-love.co.uk/menu",
