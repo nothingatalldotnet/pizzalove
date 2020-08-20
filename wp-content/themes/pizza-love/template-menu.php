@@ -7,14 +7,21 @@
 
 	$is_open = get_field('current_status','option');
 	$is_taking_orders = get_field('accept_online_orders','option');
-//	if((!$is_open)&&(!$is_taking_orders)) {
-//		echo "closed";
-//	} else if(($is_open)&&(!$is_taking_orders)) {
-//		echo "open but not taking orders online";
-//	}
-
 
 	$category_array = array();
+
+	$cat_args = array(
+		'orderby' => 'title',
+		'order' => 'ASC',
+		'hide_empty' => true
+	);
+	$product_categories = get_terms('product_cat', $cat_args);
+	foreach ($product_categories as $product_category) {
+		$this_term = $product_category->name;
+		$this_slug = $product_category->slug;
+		array_push($category_array, array('name' => $this_term, 'slug' => $this_slug)); 
+	}
+
 
 	$terms = get_terms( 'product_tag' );
 	$tag_array = array();
@@ -23,7 +30,6 @@
 	        $tag_array[] = array('name' => $term->name, 'slug' => $term->slug);
 	    }
 	}
-
 ?>
 	<div class="content">
 		<div id="drop-filters">
@@ -64,12 +70,6 @@ for($i=0; $i < count($tag_array); $i++) {
 		<div class="menu-page padded">
 			<div class="menu-content">
 <?php
-	$cat_args = array(
-		'orderby' => 'title',
-		'order' => 'ASC',
-		'hide_empty' => true
-	);
-	$product_categories = get_terms('product_cat', $cat_args);
 	foreach ($product_categories as $product_category) {
 		$this_term = $product_category->name;
 		$this_slug = $product_category->slug;
@@ -118,7 +118,7 @@ for($i=0; $i < count($tag_array); $i++) {
 				echo '<span class="price slash">'.$prod_price.'</span>';
 				echo '<span class="sale">'.$prod_price_sale.'</span>';
 			} else {
- 			echo '	<span class="price">'.$prod_price.'</span>';
+ 				echo '	<span class="price">'.$prod_price.'</span>';
 			}
 			echo '	<div class="product-information">';
 

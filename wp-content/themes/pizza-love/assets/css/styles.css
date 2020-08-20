@@ -650,37 +650,36 @@ header .menu-items a {
 .menu-page .menu-filters label input,
 .filter-list label input,
 .woocommerce-form__label-for-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
 
 
 .radiomark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
 }
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
 }
 
 #payment > div > div.woocommerce-terms-and-conditions-wrapper > p > label > span.checkmark {
 	background-color: #fff;	
 }
-
 
 .menu-page .menu-filters label:hover input ~ .radiomark,
 .menu-page .menu-filters label:hover input ~ .checkmark,
@@ -688,21 +687,21 @@ header .menu-items a {
 .filter-list label:hover input ~ .checkmark,
 .woocommerce-form__label-for-checkbox:hover  ~ .checkmark,
 .woocommerce-form__label-for-checkbox:hover input ~ .radiomark {
-  background-color: #ccc;
+ 	background-color: #ccc;
 }
 
 
 .menu-page .menu-filters label input:checked ~ .radiomark,
 .filter-list label input:checked ~ .radiomark,
 .woocommerce-form__label-for-checkbox input:checked ~ .radiomark {
-  background-color: #eee;
+	background-color: #eee;
 }
 
 .radiomark:after,
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 .menu-page .menu-filters label input:checked ~ .radiomark:after,
@@ -711,32 +710,32 @@ header .menu-items a {
 .filter-list label input:checked ~ .checkmark:after,
 .woocommerce-form__label-for-checkbox input:checked ~ .radiomark:after,
 .woocommerce-form__label-for-checkbox input:checked ~ .checkmark:after {
-  display: block;
+	display: block;
 }
 
 .menu-page .menu-filters label .radiomark:after,
 .filter-list label .radiomark:after
 .woocommerce-form__label-for-checkbox .radiomark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ed1c23;
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #ed1c23;
 }
 
 .menu-page .menu-filters label .checkmark:after,
 .filter-list label .checkmark:after,
 .woocommerce-form__label-for-checkbox .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid #ed1c23;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid #ed1c23;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .menu-page .menu-filters {
