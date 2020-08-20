@@ -632,7 +632,7 @@ header .menu-items a {
 
 .menu-page .menu-filters label,
 .filter-list label,
-.woocommerce-form__label-for-checkbox label {
+.woocommerce-form__label-for-checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
