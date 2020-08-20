@@ -253,5 +253,14 @@
 			</div>
 		</div>
 	</div>
+	<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        	{"@type": "ListItem","position": 1,"item": {"@id": "<?php echo get_the_permalink(); ?>", "name": "Home"}}
+        ]
+    }
+    </script>
 <?php
 	get_footer();
