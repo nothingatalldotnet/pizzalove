@@ -22,7 +22,7 @@ h1, h2, h3 {
 }
 
 h1 .red, h2 .red, h3 .red {
-	color: #ED1C24;
+	color: #ED1C24 !important;
 }
 
 .closed {
