@@ -71,10 +71,6 @@ for($i=0; $i < count($tag_array); $i++) {
 			<div class="menu-content">
 <?php
 	foreach ($product_categories as $product_category) {
-		$this_term = $product_category->name;
-		$this_slug = $product_category->slug;
-		array_push($category_array, array('name' => $this_term, 'slug' => $this_slug)); 
-
 		$product_args = array(
 			'posts_per_page' => -1,
 			'tax_query' => array(
