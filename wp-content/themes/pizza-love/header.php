@@ -41,8 +41,8 @@
 				},
 				"geo": {
 					"@type": "GeoCoordinates",
-					"latitude": 
-					"longitude": 
+					"latitude": "53.5464567",
+					"longitude": "-2.0095687"
 				},
 				"url":"https://pizza-love.co.uk",
 				"telephone": "",
