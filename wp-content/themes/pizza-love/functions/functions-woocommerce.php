@@ -40,14 +40,3 @@
 		echo "If you have any dietry concerns or any specific delivery/pick up details, please leave this information in the notes section above.";
 	}
 	add_action('woocommerce_checkout_before_order_review', 'order_notes', 20);
-
-	function chcekoutFieldValidation( $field, $key, $args, $value ) {
-		if ( strpos( $field, '</label>' ) !== false && $args['required'] ) {
-			$error = '<span class="error" style="display:none">';
-			$error .= sprintf( __( '%s is a required field.', 'woocommerce' ), $args['label'] );
-			$error .= '</span>';
-			$field = substr_replace( $field, $error, strpos( $field, '</label>' ), 0);
-		}
-		return $field;
-	}
-	add_filter('woocommerce_form_field', 'chcekoutFieldValidation', 10, 4);
