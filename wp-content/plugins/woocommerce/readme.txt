@@ -1,10 +1,10 @@
 === WooCommerce ===
-Contributors: automattic, mikejolley, jameskoster, claudiosanches, kloon, rodrigosprimo, peterfabian1000, vedjain, jamosova, obliviousharmony
+Contributors: automattic, mikejolley, jameskoster, claudiosanches, kloon, rodrigosprimo, peterfabian1000, vedjain, jamosova, obliviousharmony, konamiman
 Tags: e-commerce, store, sales, sell, woo, shop, cart, checkout, downloadable, downloads, payments, paypal, storefront, stripe, woo commerce
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 7.0
-Stable tag: 4.3.3
+Stable tag: 4.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -179,12 +179,14 @@ INTERESTED IN DEVELOPMENT?
 
 == Changelog ==
 
-= 4.3.3 - 2020-08-14 =
+= 4.4.1 - 2020-08-19 =
 
-**WooCommerce REST API 1.0.10-pl-2**
-* Fix - Fix regression and restore backward compatibility for date-time and mixed datatypes. #239
+**WooCommerce**
+* Fix - Add protection to run adjust methods only if product query. #27396
+* Dev - Stripped the internals of the DI Container to address plugin dependency conflicts it caused. #27395
+* Fix - Add more protection for field locale property incase it's not defined. #27405
 
-[See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/master/CHANGELOG.txt).
+[See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/master/changelog.txt).
 
 == Upgrade Notice ==
 
