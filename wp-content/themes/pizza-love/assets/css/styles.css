@@ -422,6 +422,7 @@ header .menu-items a {
 		@media (max-width: 700px) {
 			.block-cta {
 				margin-bottom: 20px;
+				padding-bottom: 45px;
 			}
 
 			.block-cta img {
