@@ -697,7 +697,12 @@ header .menu-items a {
 	background-color: #eee;
 }
 
-.radiomark:after,
+.radiomark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
 .checkmark:after {
 	content: "";
 	position: absolute;
