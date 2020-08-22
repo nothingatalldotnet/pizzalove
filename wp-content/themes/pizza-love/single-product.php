@@ -1,17 +1,23 @@
 <?php
 	get_header();
-	echo '<div class="content">';
 
 	if(have_posts()) {
 		while(have_posts()) {
 			the_post();
+			$this_title = get_the_title();
+?>
+	<div class="content">
+		<div class="single-product-wrapper padded">
+			<h1><?php echo $this_title; ?></h1>
 
-			echo '<div class="single-product-wrapper padded">';
-			the_content();
-			echo '</div>';
+			<div>
+<?php
+	the_content();
+?>
+			</div>
+		</div>
+	</div>
+<?php
 		}
 	}
-
-	echo '</div>';
 	get_footer();
-?>

@@ -881,6 +881,16 @@ header .menu-items a {
 	display: none;
 }
 
+.woocommerce div.product div.summary {
+	float: none;
+}
+
+.woocommerce-variation-add-to-cart .qty,
+.single-product .qty {
+	height: 41px;
+	width: 110px;
+}
+
 /***************************
 * PRODUCT MODAL
 ***************************/
