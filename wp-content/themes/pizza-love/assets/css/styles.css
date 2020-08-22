@@ -1117,6 +1117,7 @@ footer {
 	footer .footer-cred ul {
 		color: #fff;
 		font-size: 16px;
+		text-align: right;
 	}
 
 	footer .footer-cred ul li {
