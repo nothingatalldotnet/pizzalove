@@ -113,7 +113,7 @@ for($i=0; $i < count($tag_array); $i++) {
 				$prod_price = wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price())));
 			}
 
-			$prod_price_sale = wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price())));
+//			$prod_price_sale = wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price())));
 			$prod_price_simple = $product->get_price();
 
 			$prod_tag_display = "";
@@ -127,12 +127,12 @@ for($i=0; $i < count($tag_array); $i++) {
 			}
 			echo '<div class="product '.$this_slug.$prod_tag_class.'" data-pid="'.$prod_id.'">';
 			echo '	<h3>'.$prod_name.'</h3>';
-			if($prod_price_sale != $prod_price) {
-				echo '<span class="price slash">'.$prod_price.'</span>';
-				echo '<span class="sale">'.$prod_price_sale.'</span>';
-			} else {
+//			if($prod_price_sale != $prod_price) {
+//				echo '<span class="price slash">'.$prod_price.'</span>';
+//				echo '<span class="sale">'.$prod_price_sale.'</span>';
+//			} else {
  				echo '	<span class="price">'.$prod_price.'</span>';
-			}
+//			}
 			echo '	<div class="product-information">';
 
 			if(($is_open)&&($is_taking_orders)) {
