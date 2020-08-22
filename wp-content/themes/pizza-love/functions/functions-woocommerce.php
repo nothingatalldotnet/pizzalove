@@ -105,6 +105,7 @@ function show_price_in_attribute_dropdown( $html, $args ) {
                 $selected = sanitize_title( $args['selected'] ) === $args['selected'] ? selected( $args['selected'], sanitize_title( $option ), false ) : selected( $args['selected'], $option, false );
                 // Get and inserting the price
                 $price_html = get_the_variation_price_html( $product, $name, $term->slug );
+                error_log("PRICE:".$price_html);
                 $html .= '<option value="' . esc_attr( $option ) . '" ' . $selected . '>' . esc_html( apply_filters( 'woocommerce_variation_option_name', $option ) . ' ::: ' . $price_html ) . '</option>';
             }
         }
