@@ -66,7 +66,7 @@ var General = {
 	filterItems: function() {
 		var filter_string = "",
 			category = "";
-		
+
 		if(jQuery(window).width() <= 700) {
 			category = jQuery(".filter-list input[type=radio]:checked").val();
 		} else {
@@ -108,6 +108,9 @@ var General = {
 	},
 
 	openModal: function(e) {
+
+		General.closeModal();
+
 		e.preventDefault();
 		var modal = jQuery(e.target).closest('.product').find('.modal'),
 			pid = jQuery(e.target).closest('.product').data('pid');

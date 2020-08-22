@@ -430,9 +430,8 @@ header .menu-items a {
 			}
 
 			.block-cta div a {
-				margin-left: 40px;
 				margin-bottom: 20px;
-				display: inline !important;
+				margin-left: 75px
 			}
 		}
 
