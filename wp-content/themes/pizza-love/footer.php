@@ -5,7 +5,6 @@
 			</a>
 
 			<div class="footer-cred">
-				<a href="tel:<?php echo get_field('contact_phone', 'option'); ?>" title="Order by phone"><?php echo get_field('contact_phone', 'option'); ?></a>
 				<ul class="social menu-items">
 <?php
 	if(get_field('social_facebook', 'option') != "") {
