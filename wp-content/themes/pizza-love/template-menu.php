@@ -94,9 +94,26 @@ for($i=0; $i < count($tag_array); $i++) {
 			$prod_url = get_the_permalink();
 			$prod_tags = get_the_terms($prod_id, 'product_tag');
 			$prod_image = get_the_post_thumbnail_url();
-			$prod_price = wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price())));
-			$prod_price_sale = wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price())));
 			$prod_sku = $product->get_sku();
+			
+
+			$prod_price_simple = $product->get_price();
+
+			if($product->is_type( 'variable' )) {
+				$prod_price = wc_price(
+					wc_get_price_to_display(
+						$product, array('price' => $product->get_variation_price('min')))
+				)." - ".wc_price(
+					wc_get_price_to_display(
+						$product, array('price' => $product->get_variation_price('max')))
+				);
+
+
+			} else {
+				$prod_price = wc_price(wc_get_price_to_display($product, array('price' => $product->get_regular_price())));
+			}
+
+			$prod_price_sale = wc_price(wc_get_price_to_display($product, array('price' => $product->get_sale_price())));
 			$prod_price_simple = $product->get_price();
 
 			$prod_tag_display = "";
