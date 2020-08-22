@@ -37,7 +37,7 @@
         	<div class="filter-list">
 				<h3>Categories</h3>
 				<ul>
-					<li><label>All <input type='radio' name='category' class="all" checked="checked" value=''><span class='radiomark'></span></label></li>
+					<li><label>All <input type='radio' name='category' value='all' class="all" checked="checked"><span class='radiomark'></span></label></li>
 <?php
 	for($i=0; $i < count($category_array); $i++) {
 		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
@@ -129,7 +129,7 @@ for($i=0; $i < count($tag_array); $i++) {
 				echo '			<a href="#" class="black-button margin product-more-info" title="'.$prod_name.'">More Info</a>';
 				echo '		</form>';
 			}
-//			echo '		<img src="'.$prod_image.'">';
+
 			echo '	</div>';
 			echo '	<div class="tags">'.$prod_tag_display."</div>";
 			echo '	<div class="modal">';

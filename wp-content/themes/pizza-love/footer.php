@@ -21,7 +21,7 @@
 				<div class="cred">
 					Site by <a href="https://nothingatall.net" target="_blank" title="Site by nothingatall.net">nothingatall dot net</a><br>
 					Design by <a href="https://tylaskyeart.co.uk" target="_blank" title="Design by tyla skye art">tyla skye art</a><br>
-					Artwork by <a href="https://www.etsy.com/uk/shop/darkgrail" target="_blank" title="Artwork by dark grail">dark grail</a>
+					Artwork by <a href="https://www.instagram.com/darkgrail" target="_blank" title="Artwork by dark grail">dark grail</a>
 				</div>
 			</div>
 		</footer>

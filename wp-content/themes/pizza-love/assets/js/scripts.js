@@ -12,9 +12,6 @@ var General = {
 	},
 
 	initIsotope: function() {
-		jQuery('.all').prop("checked",true);
-		jQuery('.all').closest('label').find('.all').show();
-
         jQuery(".menu-content").isotope({
             layoutMode: 'fitRows',
             itemSelector: '.product',
@@ -79,7 +76,7 @@ var General = {
 
 		if(jQuery(window).width() <= 700) {
 			jQuery('.filter-list input[type=checkbox]:checked').each(function() {
-				if(category !== "") {
+				if((category !== "")&&(category !== 'all')) {
 					filter_string += '.'+category+'.'+jQuery(this).val()+', ';	
 				} else {
 					filter_string += '.'+jQuery(this).val()+', ';	
@@ -87,7 +84,7 @@ var General = {
 			});
 		} else {
 			jQuery('.menu-filters input[type=checkbox]:checked').each(function() {
-				if(category !== "") {
+				if((category !== "")&&(category !== 'all')) {
 					filter_string += '.'+category+'.'+jQuery(this).val()+', ';	
 				} else {
 					filter_string += '.'+jQuery(this).val()+', ';	
@@ -97,13 +94,14 @@ var General = {
 
 		filter_string = filter_string.replace(/,\s*$/, "");
 
-		if((filter_string === "")&&(category !== "")) {
+		if((filter_string === "")&&(category !== "")&&(category !== "all")) {
 			filter_string = '.'+category;
 		} 
 
 		if(filter_string === "") {
 			filter_string = "*";
 		}
+
 		jQuery(".menu-content").isotope({filter:filter_string});
 	},
 
