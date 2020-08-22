@@ -1,6 +1,12 @@
 <?php
 	add_filter('wc_add_to_cart_message_html', '__return_null' );
 
+	function remove_content_editior_for_products() {
+		remove_post_type_support('product', 'editor');
+	}
+	add_action('init', 'remove_content_editior_for_products');
+
+
 	function woocommerce_custom_single_add_to_cart_text() {
 		return __('Buy Now', 'woocommerce'); 
 	}
