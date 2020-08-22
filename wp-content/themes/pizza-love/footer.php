@@ -5,8 +5,8 @@
 			</a>
 
 			<div class="footer-cred">
+				<a href="tel:<?php echo get_field('contact_phone', 'option'); ?>" title="Order by phone"><?php echo get_field('contact_phone', 'option'); ?></a>
 				<ul class="social menu-items">
-					<li class="phone"><a href="tel:<?php echo get_field('contact_phone', 'option'); ?>" title="Order by phone"><?php echo get_field('contact_phone', 'option'); ?></a></li>
 <?php
 	if(get_field('social_facebook', 'option') != "") {
 		echo '<li><a href="'.get_field('social_facebook', 'option').'" target="_blank" title="PizzaLove on Facebook"><i class="fab fa-facebook-f fa-lg"></i></a></li>';
