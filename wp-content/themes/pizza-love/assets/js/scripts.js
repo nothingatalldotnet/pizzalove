@@ -109,7 +109,7 @@ var General = {
 
 	openModal: function(e) {
 
-		General.closeModal();
+		jQuery('.modal').hide();
 
 		e.preventDefault();
 		var modal = jQuery(e.target).closest('.product').find('.modal'),

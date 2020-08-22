@@ -717,9 +717,7 @@ header .menu-items a {
 	display: block;
 }
 
-.menu-page .menu-filters label .radiomark:after,
-.filter-list label .radiomark:after
-.woocommerce-form__label-for-checkbox .radiomark:after {
+.radiomark:after {
 	top: 9px;
 	left: 9px;
 	width: 8px;
@@ -728,9 +726,7 @@ header .menu-items a {
 	background: #ed1c23;
 }
 
-.menu-page .menu-filters label .checkmark:after,
-.filter-list label .checkmark:after,
-.woocommerce-form__label-for-checkbox .checkmark:after {
+.checkmark:after {
 	left: 9px;
 	top: 5px;
 	width: 5px;
