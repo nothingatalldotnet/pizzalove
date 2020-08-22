@@ -86,13 +86,13 @@ error_log(print_r($options),true);
 
 				$selected = sanitize_title($args['selected']) === $args['selected'] ? selected($args['selected'], sanitize_title( $option ), false) : selected( $args['selected'], $option, false );
 
-				// $price_html = '';
-				// foreach($product->get_available_variations() as $variation ){
-				// 	if($variation['attributes'][$name] == $term_slug ){
-				// 		$price_html = strip_tags($variation['price_html']);
-				// 		break;
-				// 	}
-				// }
+				$price_html = '';
+				foreach($product->get_available_variations() as $variation) {
+					if($variation['attributes'][$name] == $option){
+						$price_html = strip_tags($variation['price_html']);
+						break;
+					}
+				}
 				
 				error_log("PRICE:".$price_html);
 				$html .= '<option value="'.esc_attr($option).'" '.$selected.'>'.esc_html(apply_filters('woocommerce_variation_option_name', $option) . ' - '.$price_html).'</option>';
