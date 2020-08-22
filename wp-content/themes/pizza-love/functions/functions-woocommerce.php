@@ -42,7 +42,6 @@
 	add_action('woocommerce_checkout_before_order_review', 'order_notes', 20);
 
 	function add_basket_count_to_nav($items) {
-
 		if((!(is_checkout()))&&(!(is_cart()))) {
 			$basket_count = '<li class="menu-item">';
 			$basket_count .= sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count());
@@ -57,51 +56,44 @@
 
 
 	function show_price_in_attribute_dropdown($html, $args) {
-    if(sizeof($args['product']->get_variation_attributes()) == 1) {
+	    if(sizeof($args['product']->get_variation_attributes()) == 1) {
 
-	    $options = $args['options'];
-	    $product = $args['product'];
-	    $attribute = $args['attribute'];
-	    $name = $args['name'] ? $args['name'] : 'attribute_' . sanitize_title( $attribute );
-	    $id = $args['id'] ? $args['id'] : sanitize_title( $attribute );
-	    $class = $args['class'];
-	    $show_option_none = $args['show_option_none'] ? true : false;
-	    $show_option_none_text = $args['show_option_none'] ? $args['show_option_none'] : __( 'Choose an option', 'woocommerce' );
+		    $options = $args['options'];
+		    $product = $args['product'];
+		    $attribute = $args['attribute'];
+		    $name = $args['name'] ? $args['name'] : 'attribute_' . sanitize_title( $attribute );
+		    $id = $args['id'] ? $args['id'] : sanitize_title( $attribute );
+		    $class = $args['class'];
+		    $show_option_none = $args['show_option_none'] ? true : false;
+		    $show_option_none_text = $args['show_option_none'] ? $args['show_option_none'] : __( 'Choose an option', 'woocommerce' );
 
-	    if ( empty( $options ) && ! empty( $product ) && ! empty( $attribute ) ) {
-	        $attributes = $product->get_variation_attributes();
-	        $options    = $attributes[ $attribute ];
-	    }
+		    if ( empty( $options ) && ! empty( $product ) && ! empty( $attribute ) ) {
+		        $attributes = $product->get_variation_attributes();
+		        $options    = $attributes[ $attribute ];
+		    }
 
-		$html = '<select id="'.esc_attr($id).'" class="'.esc_attr($class).'" name="'.esc_attr( $name ).'" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
-		$html .= '<option value="">'.esc_html( $show_option_none_text ).'</option>';
+			$html = '<select id="'.esc_attr($id).'" class="'.esc_attr($class).'" name="'.esc_attr( $name ).'" data-attribute_name="attribute_' . esc_attr( sanitize_title( $attribute ) ) . '" data-show_option_none="' . ( $show_option_none ? 'yes' : 'no' ) . '">';
+			$html .= '<option value="">'.esc_html( $show_option_none_text ).'</option>';
 
+		    if(!empty($options)) {
+				foreach($options as $option) {
+					$selected = sanitize_title($args['selected']) === $args['selected'] ? selected($args['selected'], sanitize_title( $option ), false) : selected( $args['selected'], $option, false );
 
-error_log(print_r($options),true);
-
-	    if(!empty($options)) {
-			foreach($options as $option) {
-
-
-
-				$selected = sanitize_title($args['selected']) === $args['selected'] ? selected($args['selected'], sanitize_title( $option ), false) : selected( $args['selected'], $option, false );
-
-				$price_html = '';
-				foreach($product->get_available_variations() as $variation) {
-					if($variation['attributes'][$name] == $option){
-						$price_html = strip_tags($variation['price_html']);
-						break;
+					$price_html = '';
+					foreach($product->get_available_variations() as $variation) {
+						if($variation['attributes'][$name] == $option){
+							$price_html = strip_tags($variation['price_html']);
+							break;
+						}
 					}
-				}
-				
-				error_log("PRICE:".$price_html);
-				$html .= '<option value="'.esc_attr($option).'" '.$selected.'>'.esc_html(apply_filters('woocommerce_variation_option_name', $option) . ' - '.$price_html).'</option>';
-	        }
-	    }
-	    $html .= '</select>';
+					
+					error_log("PRICE:".$price_html);
+					$html .= '<option value="'.esc_attr($option).'" '.$selected.'>'.esc_html(apply_filters('woocommerce_variation_option_name', $option) . ' - '.$price_html).'</option>';
+		        }
+		    }
+		    $html .= '</select>';
 
-	    }
-
+		   }
 	    return $html;
 	}
 	add_filter('woocommerce_dropdown_variation_attribute_options_html', 'show_price_in_attribute_dropdown', 10, 2);
