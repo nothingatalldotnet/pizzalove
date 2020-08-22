@@ -1,3 +1,5 @@
+/* global ajax_url, jQuery */
+
 var General = {
 	settings: {
 
@@ -63,8 +65,7 @@ var General = {
 
 	filterItems: function() {
 		var filter_string = "",
-			category = "",
-			tags = "";
+			category = "";
 		
 		if(jQuery(window).width() <= 700) {
 			category = jQuery(".filter-list input[type=radio]:checked").val();
@@ -108,8 +109,23 @@ var General = {
 
 	openModal: function(e) {
 		e.preventDefault();
-		var modal = jQuery(e.target).closest('.product').find('.modal')
-		modal.show();
+		var modal = jQuery(e.target).closest('.product').find('.modal'),
+			pid = jQuery(e.target).closest('.product').data('pid');
+
+ 		var payload = {
+ 			"action": 'popup_product',
+ 			"pid": pid
+ 		};
+
+		jQuery.ajax({
+		    url: ajax_url,
+		    type: 'POST',
+		    data: payload,
+		    success: function(data){
+	    		modal.find('.modal-ajax').empty().html(data);
+	    		modal.show();
+		    }
+		});
 	},
 
 	closeModal: function(e) {

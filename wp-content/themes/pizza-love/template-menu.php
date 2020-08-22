@@ -108,7 +108,7 @@ for($i=0; $i < count($tag_array); $i++) {
 					$prod_tag_display .= '<span>'.$prod_tag->name.'</span> ';
 				}
 			}
-			echo '<div class="product '.$this_slug.$prod_tag_class.'">';
+			echo '<div class="product '.$this_slug.$prod_tag_class.'" data-pid="'.$prod_id.'">';
 			echo '	<h3>'.$prod_name.'</h3>';
 			if($prod_price_sale != $prod_price) {
 				echo '<span class="price slash">'.$prod_price.'</span>';
@@ -135,7 +135,7 @@ for($i=0; $i < count($tag_array); $i++) {
 			echo '	<div class="modal">';
 			echo '		<div class="modal-content">';
 			echo '			<a href="#" class="modal-close"><i class="fas fa-times"></i></a>';
-			echo 			do_shortcode('[product_page id='.$prod_id.']');
+			echo ' 			<div class="modal-ajax"></div>';
 			echo '		</div>';
 			echo '	</div>';
 

@@ -9,6 +9,6 @@
 	// include_once('functions/functions-admin.php');
 	// include_once('functions/functions-acf.php');
 	// include_once('functions/functions-walkers.php');
-	// include_once('functions/functions-ajax.php');
+	include_once('functions/functions-ajax.php');
 	include_once('functions/functions-woocommerce.php');
 	include_once('functions/functions-cleanup.php');
