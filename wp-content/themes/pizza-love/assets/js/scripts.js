@@ -1,14 +1,16 @@
 /* global ajax_url, jQuery */
 
 var General = {
-	settings: {
-
-	},
 
 	init: function() {
+		General.initMobileRadio();
 		General.initIsotope();
 		General.initSlick();
 		General.bindEvents();
+	},
+
+	initMobileRadio: function() {
+		jQuery("#drop-filters > div > ul:nth-child(2) > li:nth-child(1) > label > input").prop("checked","checked");
 	},
 
 	initIsotope: function() {
