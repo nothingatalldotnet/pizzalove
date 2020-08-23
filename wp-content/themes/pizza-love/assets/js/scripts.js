@@ -4,6 +4,7 @@ var General = {
 
 	init: function() {
 		General.initAllRadio();
+		General.initCartHeight();
 		General.initIsotope();
 		General.initSlick();
 		General.bindEvents();
@@ -12,6 +13,17 @@ var General = {
 	initAllRadio: function() {
 		jQuery("#drop-filters > div > ul:nth-child(2) > li:nth-child(1) > label > input").prop("checked","checked");
 		jQuery("body > div.content > div.menu-page.padded > div.menu-filters > div > ul:nth-child(2) > li:nth-child(1) > label > input").prop("checked","checked");
+	},
+
+	initCartHeight: function() {
+		var left = parseInt(jQuery('.cart-silly').height(), 10),
+			right = parseInt(jQuery('.cart_totals').height(), 10);
+
+		if(right > left) {
+			jQuery('.cart-silly').height(right);
+		} else {
+			jQuery('.cart_totals').height(left);
+		}
 	},
 
 	initIsotope: function() {
