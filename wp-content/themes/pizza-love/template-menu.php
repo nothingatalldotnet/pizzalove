@@ -214,8 +214,7 @@ for($i=0; $i < count($tag_array); $i++) {
         "@context": "http://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-        	{"@type": "ListItem","position": 1,"item": {"@id": "<?php echo get_site_url(); ?>", "name": "Home"}},
-        	{"@type": "ListItem","position": 2,"item": {"@id": "<?php echo get_the_permalink(); ?>","name": "Menu"}}
+        	{"@type": "ListItem","position": 1,"item": {"@id": "<?php echo get_site_url(); ?>", "name": "Home"}}
         ]
     }
     </script>
