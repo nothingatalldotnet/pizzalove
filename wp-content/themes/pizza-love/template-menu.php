@@ -37,10 +37,10 @@
         	<div class="filter-list">
 				<h3>Categories</h3>
 				<ul>
-					<li><label>All <input type='radio' name='category' value='all' class="all" checked="checked"><span class='radiomark'></span></label></li>
+					<li><label>All <input type='radio' name='category-mob' value='all' class="all" checked="checked"><span class='radiomark'></span></label></li>
 <?php
 	for($i=0; $i < count($category_array); $i++) {
-		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
+		echo "<li><label>".$category_array[$i]['name']."<input type='radio' name='category-mob' value='".$category_array[$i]['slug']."'><span class='radiomark'></span></label></li>";
 	}
 ?>
 				</ul>
