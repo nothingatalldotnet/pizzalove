@@ -3,14 +3,15 @@
 var General = {
 
 	init: function() {
-		General.initMobileRadio();
+		General.initAllRadio();
 		General.initIsotope();
 		General.initSlick();
 		General.bindEvents();
 	},
 
-	initMobileRadio: function() {
+	initAllRadio: function() {
 		jQuery("#drop-filters > div > ul:nth-child(2) > li:nth-child(1) > label > input").prop("checked","checked");
+		jQuery("body > div.content > div.menu-page.padded > div.menu-filters > div > ul:nth-child(2) > li:nth-child(1) > label > input").prop("checked","checked");
 	},
 
 	initIsotope: function() {
