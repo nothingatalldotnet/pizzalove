@@ -425,6 +425,7 @@ header .menu-items a {
 		    background: #fff;
 		    padding: 40px 0 40px 40px;
 		}
+
 		@media (max-width: 700px) {
 			.block-cta {
 				margin-bottom: 20px;
@@ -437,8 +438,15 @@ header .menu-items a {
 
 			.block-cta div a {
 				margin-bottom: 20px;
-				margin-left: 75px
 			}
+
+			.block-cta div .links {
+				justify-content: space-around;
+				flex-direction: row;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
 		}
 
 	.block-popular {
@@ -491,8 +499,20 @@ header .menu-items a {
 			width: 12px;
 		}
 
+	@media (max-width: 700px) {
+		.block-popular h2 {
+			text-align: center;
+		}
+	}
+
 	.block-about: {
 
+	}
+
+	@media (max-width: 700px) {
+		.block-about {
+			text-align: center;
+		}
 	}
 
 	.block-signup {
@@ -537,6 +557,11 @@ header .menu-items a {
 	}
 
 	@media (max-width: 700px) {
+
+		.block-map {
+			text-align: center;
+		}
+
 		.block-map div.flex {
 			display: block;
 		}
@@ -554,8 +579,13 @@ header .menu-items a {
 			width: 100%;
 		}
 
+		.block-map div.right ul {
+			text-align: left;
+		}
+
 		.block-map div.right table {
 			width: 100%;
+			text-align: left;
 		}
 
 		.block-map ul li {

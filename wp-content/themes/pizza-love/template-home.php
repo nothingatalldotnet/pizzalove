@@ -42,8 +42,10 @@
 			<div>
 				<h1 class="title"><?php echo $banner_title_black; ?> <span class="red"><?php echo $banner_title_red; ?></span></h1>
 				<?php echo $banner_text; ?><br><br>
-				<a href="<?php echo $banner_cta_link; ?>" class="red-button"><?php echo $banner_cta_text; ?></a>
-				<a href="tel:<?php echo $banner_cta_phone; ?>" class="red-button"><?php echo $banner_cta_phone_text; ?></a>
+				<div class="links">
+					<a href="<?php echo $banner_cta_link; ?>" class="red-button"><?php echo $banner_cta_text; ?></a>
+					<a href="tel:<?php echo $banner_cta_phone; ?>" class="red-button"><?php echo $banner_cta_phone_text; ?></a>
+				</div>
 			</div>
 		</div>
 
