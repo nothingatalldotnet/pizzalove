@@ -75,6 +75,9 @@
 	if(get_field('social_instagram', 'option') != "") {
 		echo '<li><a href="'.get_field('social_instagram', 'option').'" target="_blank" title="PizzaLove on Instagram"><i class="fab fa-instagram fa-lg"></i></a></li>';
 	}
+	if(get_field('social_whatsapp', 'option') != "") {
+		echo '<li><a href="'.get_field('social_whatsapp', 'option').'" target="_blank" title="PizzaLove on Whatsapp"><i class="fab fa-whatsapp fa-lg"></i></a></li>';
+	}
 ?>
 						</ul>
 <?php

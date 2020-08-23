@@ -70,6 +70,22 @@
             "placeholder": ""
         },
         {
+            "key": "field_5f42653a54b77",
+            "label": "WhatsApp",
+            "name": "social_whatsapp",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5f12d4a4aee97",
             "label": "Contact",
             "name": "",
@@ -983,5 +999,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1597496541
+    "modified": 1598187083
 }
