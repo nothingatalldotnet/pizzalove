@@ -672,6 +672,7 @@ header .menu-items a {
 			.product-information form a {
 				min-width: 0px;
 				padding: auto;
+				margin-top: 0 !important;
 			}
 		}
 
