@@ -667,6 +667,12 @@ header .menu-items a {
 				justify-content: space-between;
 				margin-bottom: 0  !important;
 			}
+
+			.product-information form button,
+			.product-information form a {
+				min-width: 0px;
+				padding: auto;
+			}
 		}
 
 	.menu-page .menu-filters {
@@ -905,21 +911,28 @@ header .menu-items a {
 /***************************
 * PRODUCT
 ***************************/
-.product_meta,
-.tabs,
-.woocommerce-product-gallery {
-	display: none;
-}
+	.product_meta,
+	.tabs,
+	.woocommerce-product-gallery {
+		display: none;
+	}
 
-.woocommerce div.product div.summary {
-	float: none;
-}
+	.woocommerce div.product div.summary {
+		float: none;
+	}
 
-.woocommerce-variation-add-to-cart .qty,
-.single-product .qty {
-	height: 41px;
-	width: 110px;
-}
+	.woocommerce-variation-add-to-cart .qty,
+	.single-product .qty {
+		height: 41px;
+		width: 110px;
+	}
+
+	@media (max-width: 700px) {
+		.woocommerce div.product form.cart .variations select {
+			max-width: 57%;
+			min-width: 0;
+		}
+	}
 
 /***************************
 * PRODUCT MODAL
