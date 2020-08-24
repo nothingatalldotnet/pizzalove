@@ -82,7 +82,8 @@ for($i=0; $i < count($tag_array); $i++) {
 				)
 			),
 			'post_type' => 'product',
-			'orderby' => 'title,'
+			'orderby' => 'title',
+			'post_status' => 'publish'
 		);
 		$products = new WP_Query($product_args);
 
